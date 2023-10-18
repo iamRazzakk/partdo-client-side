@@ -13,26 +13,34 @@ const Navbar = () => {
                             <NavLink
                                 to="/"
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "active" : ""
+                                    isPending ? "pending" : isActive ? "border-b border-transparent text-red-700 underline hover:border-red-500" : ""
                                 }
                             >
                                 Home
                             </NavLink>
                             <NavLink
-                                to="/"
+                                to="/shop"
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "active" : ""
+                                    isPending ? "pending" : isActive ? "border-b border-transparent text-red-700 underline hover:border-red-500" : ""
                                 }
                             >
                                 Shop
                             </NavLink>
                             <NavLink
-                                to="/"
+                                to="/about"
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "active" : ""
+                                    isPending ? "pending" : isActive ? "border-b border-transparent text-red-700 underline hover:border-red-500" : ""
                                 }
                             >
                                 About
+                            </NavLink>
+                            <NavLink
+                                to="/contact"
+                                className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "border-b border-transparent text-red-700 underline hover:border-red-500" : ""
+                                }
+                            >
+                                Contact
                             </NavLink>
                         </ul>
                     </div>
@@ -64,6 +72,14 @@ const Navbar = () => {
                         >
                             About
                         </NavLink>
+                        <NavLink
+                            to="/contact"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "border-b border-transparent text-red-700 underline hover:border-red-500" : ""
+                            }
+                        >
+                            Contact
+                        </NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -92,14 +108,23 @@ const Navbar = () => {
                                 </div>
                             </label>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                                <li>
-                                    <a className="justify-between">
-                                        Profile
-                                        <span className="badge">New</span>
-                                    </a>
-                                </li>
-                                <li><a>Settings</a></li>
-                                <li><a>Logout</a></li>
+
+                                <NavLink
+                                    to="/logIn"
+                                    className={({ isActive, isPending }) =>
+                                        isPending ? "pending" : isActive ? "border-b border-transparent text-red-700 underline hover:border-red-500" : ""
+                                    }
+                                >
+                                    Login
+                                </NavLink>
+                                <NavLink
+                                    to="/logOut"
+                                    className={({ isActive, isPending }) =>
+                                        isPending ? "pending" : isActive ? "border-b border-transparent text-red-700 underline hover:border-red-500" : ""
+                                    }
+                                >
+                                    Logout
+                                </NavLink>
                             </ul>
                         </div>
                     </div>

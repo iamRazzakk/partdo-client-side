@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/3r0ZznT/1-car.jpg",
+        "title": "Sedan",
+        "description": "This is a sedan car with a comfortable interior and smooth ride. It's perfect for daily commuting.",
+        "about_more": "Learn more about Sedan",
+        "btn": "Button 1"
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/H7ZLn4q/2car.webp",
+        "title": "SUV",
+        "description": "Experience adventure with our SUV. It's spacious, powerful, and designed for off-road trips.",
+        "about_more": "Learn more about SUV",
+        "btn": "Button 2"
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co/0XF8RwH/3-car.jpg",
+        "title": "Sports Car",
+        "description": "Feel the thrill of speed with our sports car. It's sleek, aerodynamic, and built for performance.",
+        "about_more": "Learn more about Sports Car",
+        "btn": "Button 3"
+    },
+    {
+        "id": 4,
+        "img": "https://i.ibb.co/2vC251D/4-car.webp",
+        "title": "Truck",
+        "description": "Get the job done with our durable and rugged truck. It's built to handle heavy loads and tough tasks.",
+        "about_more": "Learn more about Truck",
+        "btn": "Button 4"
+    },
+    {
+        "id": 5,
+        "img": "https://i.ibb.co/zNR3JFg/5-car.webp",
+        "title": "Electric Car",
+        "description": "Go green with our electric car. It's eco-friendly, efficient, and comes with advanced technology.",
+        "about_more": "Learn more about Electric Car",
+        "btn": "Button 5"
+    },
+    {
+        "id": 6,
+        "img": "https://i.ibb.co/NtCcc5v/6-car.jpg",
+        "title": "Convertible",
+        "description": "Experience the open road with our convertible car. It's perfect for sunny days and leisurely drives.",
+        "about_more": "Learn more about Convertible",
+        "btn": "Button 6"
+    }
+]

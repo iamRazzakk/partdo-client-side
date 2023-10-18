@@ -1,37 +1,42 @@
 [
     {
         "id": 1,
-        "item_name": "Product 1",
+        "item_name": "Spyder® – Projector Headlights",
         "image": "https://i.ibb.co/93rWvH0/1-34-500x500.jpg",
-        "description": "This is the description for Product 1.",
-        "price": "$29.99"
+        "description": "Best-in-class all-around performance Confident driving in all weather conditions Visual Alignment Indicators.",
+        "price": "$29.99",
+        "rating": 4.5
     },
     {
         "id": 2,
-        "item_name": "Product 2",
+        "item_name": "Technaxx car Alarm with Charging Function",
         "image": "https://i.ibb.co/KyWMSNH/1-35-500x500.jpg",
-        "description": "This is the description for Product 2.",
-        "price": "$39.99"
+        "description": "Best-in-class all-around performance, Confident driving in all weather conditions, Visual Alignment Indicators",
+        "price": "$39.99",
+        "rating": 4.0
     },
     {
         "id": 3,
-        "item_name": "Product 3",
+        "item_name": "Thinkware F770 Dash Cam Dual Channel Wifi",
         "image": "https://i.ibb.co/ngYFbqf/1-36-500x500.jpg",
-        "description": "This is the description for Product 3.",
-        "price": "$49.99"
+        "description": "Best-in-class all-around performance, Confident driving in all weather conditions Visual Alignment Indicators",
+        "price": "$49.99",
+        "rating": 4.8
     },
     {
         "id": 4,
-        "item_name": "Product 4",
+        "item_name": "VISION® – 147 DAYTONA Hyper Silver",
         "image": "https://i.ibb.co/qm04jPt/1-37-500x500.jpg",
-        "description": "This is the description for Product 4.",
-        "price": "$59.99"
+        "description": "Best-in-class all-around performance, Confident driving in all weather conditions Visual Alignment Indicators.",
+        "price": "$59.99",
+        "rating": 4.2
     },
     {
         "id": 5,
-        "item_name": "Product 5",
+        "item_name": "Thinkware F770 Dash Cam Dual Channel Wifi",
         "image": "https://i.ibb.co/0yYYB2M/3-29-500x500.jpg",
-        "description": "This is the description for Product 5.",
-        "price": "$69.99"
+        "description": "Best-in-class all-around performance, Confident driving in all weather conditions Visual Alignment Indicators.",
+        "price": "$69.99",
+        "rating": 4.7
     }
 ]

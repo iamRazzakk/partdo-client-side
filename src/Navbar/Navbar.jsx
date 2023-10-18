@@ -13,34 +13,26 @@ const Navbar = () => {
                             <NavLink
                                 to="/"
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "border-b border-transparent text-red-700 underline hover:border-red-500" : ""
+                                    isPending ? "pending" : isActive ? "active" : ""
                                 }
                             >
                                 Home
                             </NavLink>
                             <NavLink
-                                to="/shop"
+                                to="/"
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "border-b border-transparent text-red-700 underline hover:border-red-500" : ""
+                                    isPending ? "pending" : isActive ? "active" : ""
                                 }
                             >
                                 Shop
                             </NavLink>
                             <NavLink
-                                to="/about"
+                                to="/"
                                 className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "border-b border-transparent text-red-700 underline hover:border-red-500" : ""
+                                    isPending ? "pending" : isActive ? "active" : ""
                                 }
                             >
                                 About
-                            </NavLink>
-                            <NavLink
-                                to="/contact"
-                                className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "border-b border-transparent text-red-700 underline hover:border-red-500" : ""
-                                }
-                            >
-                                Contact
                             </NavLink>
                         </ul>
                     </div>

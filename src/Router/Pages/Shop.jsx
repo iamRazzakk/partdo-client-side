@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+import { BsCart4 } from "react-icons/bs";
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('/Product.json') // Make sure the path is correct
+        fetch('/Product.json') 
             .then((res) => res.json())
             .then((data) => setProducts(data));
     }, []);
@@ -19,8 +20,22 @@ const Shop = () => {
                         <div className="card-body">
                             <h2 className="card-title">{product.item_name}</h2>
                             <p>{product.description}</p>
+                            <div className="card-actions justify-start">
+                                <div className="">
+                                    <p className="text-xl">{product.price}</p>
+                                </div>
+                                <div className="">
+                                    <div className="rating">
+                                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
+                                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                    </div>
+                                </div>
+                            </div>
                             <div className="card-actions justify-end">
-                                <button className="btn bg-white">See Details</button>
+                                <BsCart4 className="text-2xl"></BsCart4>
                             </div>
                         </div>
                     </div>

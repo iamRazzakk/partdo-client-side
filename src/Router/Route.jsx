@@ -6,6 +6,7 @@ import RegisterForm from "../components/RegisterForm";
 import Shop from "./Pages/Shop";
 import About from "./Pages/About";
 import ContactForm from "./Pages/ContactForm";
+import CarCardDetail from "../components/CarCardDetail";
 
 const myCreatedRouter = createBrowserRouter([
     {
@@ -26,7 +27,7 @@ const myCreatedRouter = createBrowserRouter([
             },
             {
                 path: '/contact',
-                element:<ContactForm></ContactForm>
+                element: <ContactForm></ContactForm>
             },
             {
                 path: '/logIn',
@@ -35,6 +36,10 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: '/register',
                 element: <RegisterForm></RegisterForm>
+            },
+            {
+                path: '/car/:id',
+                element: <CarCardDetail></CarCardDetail>
             }
         ],
     }

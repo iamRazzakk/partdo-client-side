@@ -6,6 +6,8 @@ import Support from "../Pages/Support/Support";
 import Contact from "../Pages/Contact/Contact";
 import Product from "../Pages/Product/Product";
 import CarDetail from "../Pages/CarDetail/CarDetail";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 
 const myCreatedRouter = createBrowserRouter([
     {
@@ -35,6 +37,14 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: '/product',
                 element: <Product></Product>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/Register',
+                element: <Register></Register>
             }
         ]
     }

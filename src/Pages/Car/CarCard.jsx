@@ -17,7 +17,7 @@ const CarCard = ({ car }) => {
                             <button className="btn btn-neutral">Update</button>
                         </div>
                         <div className="">
-                            <Link to={`/car/${id}`} state={{ car }}>
+                        <Link to={`/car/${id}`} state={{ car }}>
                                 <button className="btn btn-success bg-black text-white">See Details</button>
                             </Link>
                         </div>

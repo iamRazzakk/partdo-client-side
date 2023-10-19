@@ -5,7 +5,10 @@
         "title": "Sedan",
         "description": "This is a sedan car with a comfortable interior and smooth ride. It's perfect for daily commuting.",
         "about_more": "Learn more about Sedan",
-        "btn": "Button 1"
+        "btn": "Button 1",
+        "brand": "Toyota",
+        "price": 25000,
+        "rating": 4.5
     },
     {
         "id": 2,
@@ -13,7 +16,10 @@
         "title": "SUV",
         "description": "Experience adventure with our SUV. It's spacious, powerful, and designed for off-road trips.",
         "about_more": "Learn more about SUV",
-        "btn": "Button 2"
+        "btn": "Button 2",
+        "brand": "Ford",
+        "price": 35000,
+        "rating": 4.3
     },
     {
         "id": 3,
@@ -21,7 +27,10 @@
         "title": "Sports Car",
         "description": "Feel the thrill of speed with our sports car. It's sleek, aerodynamic, and built for performance.",
         "about_more": "Learn more about Sports Car",
-        "btn": "Button 3"
+        "btn": "Button 3",
+        "brand": "BMW",
+        "price": 50000,
+        "rating": 4.7
     },
     {
         "id": 4,
@@ -29,7 +38,10 @@
         "title": "Truck",
         "description": "Get the job done with our durable and rugged truck. It's built to handle heavy loads and tough tasks.",
         "about_more": "Learn more about Truck",
-        "btn": "Button 4"
+        "btn": "Button 4",
+        "brand": "Mercedes-Benz",
+        "price": 40000,
+        "rating": 4.2
     },
     {
         "id": 5,
@@ -37,7 +49,10 @@
         "title": "Electric Car",
         "description": "Go green with our electric car. It's eco-friendly, efficient, and comes with advanced technology.",
         "about_more": "Learn more about Electric Car",
-        "btn": "Button 5"
+        "btn": "Button 5",
+        "brand": "Tesla",
+        "price": 45000,
+        "rating": 4.8
     },
     {
         "id": 6,
@@ -45,6 +60,9 @@
         "title": "Convertible",
         "description": "Experience the open road with our convertible car. It's perfect for sunny days and leisurely drives.",
         "about_more": "Learn more about Convertible",
-        "btn": "Button 6"
+        "btn": "Button 6",
+        "brand": "Honda",
+        "price": 30000,
+        "rating": 4.4
     }
 ]

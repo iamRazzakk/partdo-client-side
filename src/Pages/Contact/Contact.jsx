@@ -1,8 +1,7 @@
-import { useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+import React from 'react';
 
-const ContactForm = () => {
-    const [isSubmit, setIsSubmit] = useState(false)
+const Contact = () => {
+    // const [isSubmit, setIsSubmit] = useState(false)
 
     const contactUs = e => {
         e.preventDefault()
@@ -11,10 +10,10 @@ const ContactForm = () => {
         const message = e.target.message.value;
         const subject = e.target.subject.value;
         console.log(name, email, message, subject);
-        if (!isSubmit) {
-            toast.success('Thanks For contact us.')
-            setIsSubmit(true)
-        }
+        // if (!isSubmit) {
+        // toast.success('Thanks For contact us.')
+        // setIsSubmit(true)
+        // }
 
     }
     return (
@@ -74,9 +73,9 @@ const ContactForm = () => {
                     </div>
                 </div>
             </div>
-            <Toaster></Toaster>
+
         </div>
     );
 };
 
-export default ContactForm;
+export default Contact;

@@ -7,10 +7,10 @@ const Car = () => {
     const [cars, setCars] = useState([]);
 
     useEffect(() => {
-        // Initialize AOS with custom animation settings
+       
         AOS.init({
-            duration: 1000, // Animation duration in milliseconds
-            offset: 100,   // Offset (in pixels) from the top of the element
+            duration: 1000, 
+            offset: 100,  
         });
 
         fetch('/carCard.json')

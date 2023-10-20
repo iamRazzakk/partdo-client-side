@@ -90,7 +90,7 @@ const Navbar = () => {
                                 isPending ? "pending" : isActive ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
                             }
                         >
-                            <p className="text-base font-semibold">Car</p>
+                            <p className="text-base font-semibold">Brand</p>
                         </NavLink>
                     </li>
                     <li>

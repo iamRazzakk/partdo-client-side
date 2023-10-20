@@ -8,7 +8,7 @@ const CarCard = ({ car }) => {
             <div className="card card-compact h-[430px] bg-base-100 shadow-xl">
                 <figure><img className='h-[350px]' src={img} alt={title} /></figure>
                 <div className="card-body">
-                    <h2 className="card-title text-xl font-bold text-center">{brand}</h2>
+                    <Link to={`/carDetail/${id}`}><h2 className="card-title text-xl font-bold text-center">{brand}</h2></Link>
                     <div className="">
                     </div>
                 </div>

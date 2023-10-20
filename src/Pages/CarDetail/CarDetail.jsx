@@ -19,8 +19,7 @@ const CarDetail = () => {
                 <div>
                     <h1 className="text-5xl font-bold">{brand}</h1>
                     <p className="py-6">{description}</p>
-                    <p>Price: ${price}</p>
-                    <p>Rating: {rating}</p>
+                    <p>Price: ${price}</p>                    <p>Rating: {rating}</p>
                     <div className='text-3xl mt-4'>
                         <Link><button className='btn btn-link bg-white'>Add to Cart</button></Link>
                     </div>

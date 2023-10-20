@@ -1,14 +1,15 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../components/Probider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext)
+    const [haveUser, setHaveUser] = useState(false);
+    const navigate = useNavigate()
     const handleAddedUser = e => {
         e.preventDefault()
         const form = e.target;
-        const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
         console.log(name, email, password);
@@ -16,9 +17,14 @@ const Register = () => {
             .then(result => {
                 console.log(result.user);
                 toast.success("Account created Successfully")
+                setHaveUser(true)
+                e.target.reset()
+                navigate('/login')
+
             })
             .catch(error => {
                 console.log(error);
+                setHaveUser(false)
             })
     }
     return (
@@ -51,6 +57,7 @@ const Register = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
+                            <p className={haveUser ? '' : 'text-red-500'}>{haveUser ? '' : 'Already have an account please login'}</p>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>

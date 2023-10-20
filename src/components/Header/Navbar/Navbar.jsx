@@ -1,5 +1,18 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Probider/AuthProvider";
+import auth from "../../Firebase";
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
+    const handleLogOut = () => {
+        logOut()
+            .then(result => {
+                console.log(result.user);
+            })
+            .then(error => {
+                console.error(error)
+            })
+    }
 
     const navLink = <>
         <li>
@@ -82,6 +95,17 @@ const Navbar = () => {
                     </li>
                     <li>
                         <NavLink
+                            to="/addCar"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
+                            }
+                        >
+                            <p className="text-base font-semibold">Add Car</p>
+
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
                             to="/product"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
@@ -91,17 +115,7 @@ const Navbar = () => {
 
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink
-                            to="/support"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
-                            }
-                        >
-                            <p className="text-base font-semibold">Support & Service</p>
 
-                        </NavLink>
-                    </li>
                     <li>
                         <NavLink
                             to="/contact"
@@ -116,10 +130,17 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/login">
-                    <button className="btn btn-sm">Login</button>
-                </Link>
-
+                {user ? (
+                    <>
+                        <span>{user.displayName}</span>
+                        <button onClick={handleLogOut} className="btn btn-sm">Logout</button>
+                    </>
+                ) : (
+                    
+                    <Link to="/login">
+                        <button className="btn btn-sm">Login</button>
+                    </Link>
+                )}
             </div>
         </div >
     );

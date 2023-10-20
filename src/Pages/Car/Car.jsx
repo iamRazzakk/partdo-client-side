@@ -7,10 +7,10 @@ const Car = () => {
     const [cars, setCars] = useState([]);
 
     useEffect(() => {
-       
+
         AOS.init({
-            duration: 1000, 
-            offset: 100,  
+            duration: 1000,
+            offset: 100,
         });
 
         fetch('/carCard.json')

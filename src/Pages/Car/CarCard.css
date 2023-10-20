@@ -1,0 +1,11 @@
+/* Add these styles to your CSS stylesheet */
+.card.zoomed {
+    transform: scale(1.1); /* Zoom in by 10% */
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.card.zoomed-img {
+    transform: scale(1.1); /* Zoom in the image by 10% */
+    transition: transform 0.2s ease-in-out;
+}

@@ -2,12 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layout/mainLayout";
 import Home from "../Pages/Home/Home";
 import Car from "../Pages/Car/Car";
-import Support from "../Pages/Support/Support";
 import Contact from "../Pages/Contact/Contact";
 import Product from "../Pages/Product/Product";
 import CarDetail from "../Pages/CarDetail/CarDetail";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import UpdateCar from "../Pages/UpdateCar/UpdateCar";
+import AddCar from "../Pages/AddCar/AddCar";
 
 const myCreatedRouter = createBrowserRouter([
     {
@@ -27,8 +28,8 @@ const myCreatedRouter = createBrowserRouter([
                 element: <CarDetail></CarDetail>
             },
             {
-                path: 'support',
-                element: <Support></Support>
+                path: '/addCar',
+                element: <AddCar></AddCar>
             },
             {
                 path: '/contact',
@@ -45,10 +46,13 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: '/Register',
                 element: <Register></Register>
+            },
+            {
+                path: '/updateCar',
+                element: <UpdateCar></UpdateCar>
             }
         ]
     }
-])
-
+]);
 
 export default myCreatedRouter;

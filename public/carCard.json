@@ -1,68 +1,68 @@
 [
-    {
-        "id": 1,
-        "img": "https://i.ibb.co/3r0ZznT/1-car.jpg",
-        "title": "Sedan",
-        "description": "This is a sedan car with a comfortable interior and smooth ride. It's perfect for daily commuting.",
-        "about_more": "Learn more about Sedan",
-        "btn": "Button 1",
-        "brand": "Toyota",
-        "price": 25000,
-        "rating": 4.5
-    },
-    {
-        "id": 2,
-        "img": "https://i.ibb.co/H7ZLn4q/2car.webp",
-        "title": "SUV",
-        "description": "Experience adventure with our SUV. It's spacious, powerful, and designed for off-road trips.",
-        "about_more": "Learn more about SUV",
-        "btn": "Button 2",
-        "brand": "Ford",
-        "price": 35000,
-        "rating": 4.3
-    },
-    {
-        "id": 3,
-        "img": "https://i.ibb.co/0XF8RwH/3-car.jpg",
-        "title": "Sports Car",
-        "description": "Feel the thrill of speed with our sports car. It's sleek, aerodynamic, and built for performance.",
-        "about_more": "Learn more about Sports Car",
-        "btn": "Button 3",
-        "brand": "BMW",
-        "price": 50000,
-        "rating": 4.7
-    },
-    {
-        "id": 4,
-        "img": "https://i.ibb.co/2vC251D/4-car.webp",
-        "title": "Truck",
-        "description": "Get the job done with our durable and rugged truck. It's built to handle heavy loads and tough tasks.",
-        "about_more": "Learn more about Truck",
-        "btn": "Button 4",
-        "brand": "Mercedes-Benz",
-        "price": 40000,
-        "rating": 4.2
-    },
-    {
-        "id": 5,
-        "img": "https://i.ibb.co/zNR3JFg/5-car.webp",
-        "title": "Electric Car",
-        "description": "Go green with our electric car. It's eco-friendly, efficient, and comes with advanced technology.",
-        "about_more": "Learn more about Electric Car",
-        "btn": "Button 5",
-        "brand": "Tesla",
-        "price": 45000,
-        "rating": 4.8
-    },
-    {
-        "id": 6,
-        "img": "https://i.ibb.co/NtCcc5v/6-car.jpg",
-        "title": "Convertible",
-        "description": "Experience the open road with our convertible car. It's perfect for sunny days and leisurely drives.",
-        "about_more": "Learn more about Convertible",
-        "btn": "Button 6",
-        "brand": "Honda",
-        "price": 30000,
-        "rating": 4.4
-    }
+{
+    "id": 7,
+    "img": "https://i.ibb.co/85kFjKY/audi.webp",
+    "title": "Audi",
+    "description": "Discover the luxury and performance of Audi. Experience German engineering at its best.",
+    "about_more": "Learn more about Audi",
+    "btn": "Button 7",
+    "brand": "Audi",
+    "price": 60000,
+    "rating": 4.6
+},
+{
+    "id": 8,
+    "img": "https://i.ibb.co/mqFGws0/BMW.png",
+    "title": "BMW",
+    "description": "Experience the ultimate driving machine with BMW. Precision and elegance in every detail.",
+    "about_more": "Learn more about BMW",
+    "btn": "Button 8",
+    "brand": "BMW",
+    "price": 70000,
+    "rating": 4.9
+},
+{
+    "id": 9,
+    "img": "https://i.ibb.co/qkgBBSR/Bugatti-Logo.png",
+    "title": "Bugatti",
+    "description": "Unleash the power and luxury of Bugatti. Exclusivity and speed combined in one masterpiece.",
+    "about_more": "Learn more about Bugatti",
+    "btn": "Button 9",
+    "brand": "Bugatti",
+    "price": 2000000,
+    "rating": 5.0
+},
+{
+    "id": 10,
+    "img": "https://i.ibb.co/WG4vwV7/ferari.png",
+    "title": "Ferrari",
+    "description": "Experience the passion and performance of Ferrari. The iconic symbol of Italian excellence.",
+    "about_more": "Learn more about Ferrari",
+    "btn": "Button 10",
+    "brand": "Ferrari",
+    "price": 800000,
+    "rating": 4.7
+},
+{
+    "id": 11,
+    "img": "https://i.ibb.co/8Nww16n/Lamborghini-Logo.png",
+    "title": "Lamborghini",
+    "description": "Embrace the extreme with Lamborghini. A fusion of power and art that defines supercars.",
+    "about_more": "Learn more about Lamborghini",
+    "btn": "Button 11",
+    "brand": "Lamborghini",
+    "price": 1500000,
+    "rating": 4.8
+},
+{
+    "id": 12,
+    "img": "https://i.ibb.co/KN4CGQq/Marcedis.jpg",
+    "title": "Mercedes-Benz",
+    "description": "Elevate your driving experience with Mercedes-Benz. The best or nothing.",
+    "about_more": "Learn more about Mercedes-Benz",
+    "btn": "Button 12",
+    "brand": "Mercedes-Benz",
+    "price": 90000,
+    "rating": 4.5
+}
 ]

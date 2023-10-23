@@ -1,27 +1,38 @@
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useState } from "react";
 
 const UpdateCar = () => {
-    const car = useLoaderData()
-    console.log(car);
-    const { _id, name, price, brand, description, image } = car
-    const handleUpdateCar = event => {
-        event.preventDefault()
-        const form = event.target
-        const name = form.name.value;
-        const price = form.price.value;
-        const brand = form.brand.value;
-        const description = form.description.value;
-        const image = form.image.value;
-        const newCar = { name, price, brand, description, image };
-        console.log(newCar);
-        // send data to the server
-        fetch(`http://localhost:5000/brandcar/${brand}`, {
+    const car = useLoaderData();
+    const [details, setDetails] = useState(car.details); // Initialize details with car details
+    const { _id, name, price, brand, description, image } = car;
+
+    const handleUpdateCar = (event) => {
+        event.preventDefault();
+        const form = event.target;
+
+        const newName = form.name.value;
+        const newPrice = form.price.value;
+        const newBrand = form.brand.value;
+        const newDescription = form.description.value;
+        const newImage = form.image.value;
+
+        const newCar = {
+            name: newName,
+            price: newPrice,
+            brand: newBrand,
+            description: newDescription,
+            image: newImage,
+            details: details, // Include details in the update
+        };
+
+        // Send data to the server
+        fetch(`http://localhost:5000/brandcar/${newCar.brand}`, {
             method: "PUT",
             headers: {
-                'content-type': 'application/json'
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(newCar)
+            body: JSON.stringify(newCar),
         })
             .then(res => res.json())
             .then(data => {
@@ -29,13 +40,14 @@ const UpdateCar = () => {
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Car Detail Update Successfully',
+                        text: 'Car Added Successfully',
                         icon: 'success',
                         confirmButtonText: 'OK!'
                     })
                 }
             })
-    }
+    };
+
     return (
         <div className="bg-[#f4f3f0] p-24">
             <h1 className="text-3xl font-extrabold text-center">Update a Car {brand}</h1>
@@ -48,7 +60,7 @@ const UpdateCar = () => {
                         </label>
                         <label className="input-group">
                             <span>Name</span>
-                            <input type="text" name="name" placeholder="Enter your Car name" className="input input-bordered w-full" />
+                            <input type="text" name="name" defaultValue={name} placeholder="Enter your Car name" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
@@ -57,7 +69,7 @@ const UpdateCar = () => {
                         </label>
                         <label className="input-group">
                             <span>Name</span>
-                            <input type="text" name="price" placeholder="Total Price" className="input w-full input-bordered" />
+                            <input type="text" name="price" defaultValue={price} placeholder="Total Price" className="input w-full input-bordered" />
                         </label>
                     </div>
                 </div>
@@ -65,13 +77,13 @@ const UpdateCar = () => {
                 <div className="md:flex mb-8">
                     <div className="form-control py-6 md:w-1/2">
                         <label>Choose a car:</label>
-                        <select name="brand" id="cars">
+                        <select name="brand" id="cars" value={brand}>
                             <option value="BMW">BMW</option>
-                            <option value="Audi" selected>Audi</option>
-                            <option value="Bugatti" selected>Bugatti</option>
-                            <option value="Ferrari" selected>Ferrari</option>
-                            <option value="Lamborghini" selected>Lamborghini</option>
-                            <option value="Mercedes-Benz" selected>Mercedes-Benz</option>
+                            <option value="Audi">Audi</option>
+                            <option value="Bugatti">Bugatti</option>
+                            <option value="Ferrari">Ferrari</option>
+                            <option value="Lamborghini">Lamborghini</option>
+                            <option value="Mercedes-Benz">Mercedes-Benz</option>
                         </select>
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
@@ -80,7 +92,7 @@ const UpdateCar = () => {
                         </label>
                         <label className="input-group">
                             <span>Name</span>
-                            <input type="text" name="description" placeholder="Details" className="input w-full input-bordered" />
+                            <input type="text" name="description" defaultValue={description} placeholder="Details" className="input w-full input-bordered" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
@@ -89,7 +101,7 @@ const UpdateCar = () => {
                         </label>
                         <label className="input-group">
                             <span>Name</span>
-                            <input type="text" name="details" placeholder="Details" className="input w-full input-bordered" />
+                            <input type="text" name="details" value={details} onChange={(e) => setDetails(e.target.value)} placeholder="Details" className="input w-full input-bordered" />
                         </label>
                     </div>
                 </div>
@@ -101,11 +113,11 @@ const UpdateCar = () => {
                         </label>
                         <label className="input-group">
                             <span>Name</span>
-                            <input type="text" name="image" placeholder="Enter your Photo URL" className="input input-bordered w-full" />
+                            <input type="text" name="image" defaultValue={image} placeholder="Enter your Photo URL" className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Car Detail" className="btn btn-block" />
+                <input type="submit" value="Update Car Detail" className="btn btn-block" />
             </form>
         </div>
     );

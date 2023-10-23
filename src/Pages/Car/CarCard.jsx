@@ -5,7 +5,7 @@ const CarCard = ({ car }) => {
     return (
         <div>
             <div className="card card-compact h-[430px] bg-base-100 shadow-xl">
-
+               
                 <div className="card-body">
                     {/* http://localhost:5173/cardisplay/BMW */}
 

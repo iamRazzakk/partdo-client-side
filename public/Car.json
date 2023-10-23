@@ -1,0 +1,218 @@
+[
+    {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Lamborghini_Urus_19.09.20_JM_%282%29_%28cropped%29.jpg/280px-Lamborghini_Urus_19.09.20_JM_%282%29_%28cropped%29.jpg",
+        "name": "Car 1",
+        "brand": "Lamborghini",
+        "type": "Sports Car",
+        "price": 300000,
+        "description": "A powerful and sleek sports car from Lamborghini.",
+        "rating": 4.8
+    },
+    {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/2023_Lamborghini_Aventador_Ultimae.jpg/280px-2023_Lamborghini_Aventador_Ultimae.jpg",
+        "name": "Car 2",
+        "brand": "Lamborghini",
+        "type": "Super Car",
+        "price": 500000,
+        "description": "An ultra-fast supercar designed by Lamborghini.",
+        "rating": 4.9
+    },
+    {
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Lamborghini_Murci%C3%A9lago_LP-640_-_Flickr_-_Alexandre_Pr%C3%A9vot_%2840%29.jpg/280px-Lamborghini_Murci%C3%A9lago_LP-640_-_Flickr_-_Alexandre_Pr%C3%A9vot_%2840%29.jpg",
+        "name": "Car 3",
+        "brand": "Lamborghini",
+        "type": "SUV",
+        "price": 250000,
+        "description": "A luxurious SUV with the Lamborghini touch.",
+        "rating": 4.5
+    },
+    {
+        "image": "https://upload.wikimedia.org/wikipedia.commons/thumb/d/d3/1995_Lamborghini_Diablo_SE_30.jpg/280px-1995_Lamborghini_Diablo_SE_30.jpg",
+        "name": "Car 4",
+        "brand": "Lamborghini",
+        "type": "Convertible",
+        "price": 350000,
+        "description": "A stylish convertible by Lamborghini for open-top driving.",
+        "rating": 4.7
+    },
+    {
+        "image": "https://etimg.etb2bimg.com/thumb/msid-101380407,imgsize-292630,width-1200,height=765,overlay-etauto/passenger-vehicle/ferrari-launches-two-hybrid-models-in-limited-series-based-on-sf90-supercar.jpg",
+        "name": "Car 5",
+        "brand": "Ferrari",
+        "type": "Sports Car",
+        "price": 320000,
+        "description": "Ferrari's iconic sports car, known for its speed and design.",
+        "rating": 4.6
+    },
+    {
+        "image": "https://hips.hearstapps.com/hmg-prod/images/2024-ferrari-812-gts-101-64caae4038b21.jpeg?crop=0.547xw:0.548xh;0.127xw,0.342xh&resize=600:*",
+        "name": "Car 6",
+        "brand": "Ferrari",
+        "type": "Super Car",
+        "price": 550000,
+        "description": "A supercar that defines the essence of Ferrari engineering.",
+        "rating": 4.9
+    },
+    {
+        "image": "https://hips.hearstapps.com/hmg-prod/images/2020-ferrari-f8-spyder-103-1593551679.jpg?crop=0.699xw:0.592xh;0.129xw,0.208xh&resize=600:*",
+        "name": "Car 7",
+        "brand": "Ferrari",
+        "type": "SUV",
+        "price": 280000,
+        "description": "Ferrari's first luxury SUV with a blend of power and comfort.",
+        "rating": 4.5
+    },
+    {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQrfIE-64VHBmCHgy09Go9RjBgazMDa7EW-3m_0_Vs&s",
+        "name": "Car 8",
+        "brand": "Ferrari",
+        "type": "Convertible",
+        "price": 370000,
+        "description": "A convertible designed for those who love the open road.",
+        "rating": 4.7
+    },
+    {
+        "image": "https://d2ox13tjqpxop5.cloudfront.net/BUGATTI-2023/Bugatti-Homepage/MIAU-CARDS/homepage-bolide-card.jpg",
+        "name": "Car 9",
+        "brand": "Bugatti",
+        "type": "Hypercar",
+        "price": 3500000,
+        "description": "The ultimate hypercar from the house of Bugatti.",
+        "rating": 4.9
+    },
+    {
+        "image": "https://media.wired.com/photos/5927284ff3e2356fd800b9b4/master/w_1600%2Cc_limit/03_CHIRON_34-front_WEB.jpg",
+        "name": "Car 10",
+        "brand": "Bugatti",
+        "type": "Grand Tourer",
+        "price": 2500000,
+        "description": "A luxurious grand tourer by Bugatti for long-distance journeys.",
+        "rating": 4.8
+    },
+    {
+        "image": "https://newsroomcdn.bugatti.com/w_3200/3giaqcjtpfk3-01-bugatti-chiron-profilee-auction.jpg",
+        "name": "Car 11",
+        "brand": "Bugatti",
+        "type": "Supersport",
+        "price": 3800000,
+        "description": "Bugatti's high-performance supersport car that defies limits.",
+        "rating": 4.9
+    },
+    {
+        "image": "https://hips.hearstapps.com/hmg-prod/images/07-chiron-dynamic-34-front-web-1499959186.jpg?crop=0.6666666666666667xw:1xh;center,top&resize=1200:*",
+        "name": "Car 12",
+        "brand": "Bugatti",
+        "type": "Convertible",
+        "price": 4500000,
+        "description": "A breathtaking convertible from Bugatti, perfect for the elite.",
+        "rating": 4.7
+    },
+    {
+        "image": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Mercedes-Benz/S-Class/10853/1690451611932/front-left-side-47.jpg",
+        "name": "Car 13",
+        "brand": "Mercedes-Benz",
+        "type": "Sedan",
+        "price": 80000,
+        "description": "A luxurious sedan by Mercedes-Benz, known for comfort and style.",
+        "rating": 4.5
+    },
+    {
+        "image": "https://images.91wheels.com//assets/b_images/main/models/profile/profile1661250946.jpg",
+        "name": "Car 14",
+        "brand": "Mercedes-Benz",
+        "type": "SUV",
+        "price": 90000,
+        "description": "An SUV designed for both urban and off-road adventures.",
+        "rating": 4.6
+    },
+    {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgUG8GoCtQLu5V83SYoChxtCwcQ_gCvbZHvPokflRr&s",
+        "name": "Car 15",
+        "brand": "Mercedes-Benz",
+        "type": "Convertible",
+        "price": 100000,
+        "description": "A stylish convertible from Mercedes-Benz for open-air fun.",
+        "rating": 4.7
+    },
+    {
+        "image": "https://www.thedrive.com/uploads/2022/12/13/22C0387_051.jpg?auto=webp&crop=16%3A9&auto=webp&optimize=high&quality=70&width=1440",
+        "name": "Car 16",
+        "brand": "Mercedes-Benz",
+        "type": "Sports Car",
+        "price": 120000,
+        "description": "A sporty car from Mercedes-Benz for driving enthusiasts.",
+        "rating": 4.6
+    },
+    {
+        "image": "https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCElzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grz2Gv_qP6BimzkrazX1LYejUu61tOBAMrUBcjP5BgOgsk-CWABGctA5gEmTcbRNiB-ExOzAwMrBVARiQDCAhqGBAJhNldXEMcPX2CAakOdzPZAAAA?wid=850",
+        "name": "Car 17",
+        "brand": "Audi",
+        "type": "Sedan",
+        "price": 75000,
+        "description": "Audi's elegant sedan with cutting-edge technology and performance.",
+        "rating": 4.6
+    },
+    {
+        "image": "https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCElzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grj1XjPJu_u4_ctNESsdu5tGzrp8bNFxhYgboYVwEJ5iVAgm87kOB0ZQCTIPPWgIgqEJ_JmpmBgbUCyIhkAAFBDQMigTC7i2uIo6dPMAAwDt3Z2QAAAA?wid=850",
+        "name": "Car 18",
+        "brand": "Audi",
+        "type": "SUV",
+        "price": 85000,
+        "description": "An SUV that combines Audi's signature luxury with off-road capability.",
+        "rating": 4.7
+    },
+    {
+        "image": "https://cars.usnews.com/static/images/Auto/custom/15300/2024_Audi_A7_1.jpg",
+        "name": "Car 19",
+        "brand": "Audi",
+        "type": "Convertible",
+        "price": 95000,
+        "description": "An Audi convertible that brings style and performance together.",
+        "rating": 4.6
+    },
+    {
+        "image": "https://cdn.jdpower.com/Models/320x240/2023-Audi-A7.jpg",
+        "name": "Car 20",
+        "brand": "Audi",
+        "type": "Sports Car",
+        "price": 110000,
+        "description": "Audi's sports car built for exhilarating drives and racing.",
+        "rating": 4.7
+    },
+    {
+        "image": "https://i.ytimg.com/vi/SC_ECyj08AU/sddefault.jpg",
+        "name": "Car 21",
+        "brand": "BMW",
+        "type": "Sedan",
+        "price": 70000,
+        "description": "A BMW sedan known for its performance and precision engineering.",
+        "rating": 4.5
+    },
+    {
+        "image": "https://images.pexels.com/photos/100653/pexels-photo-100653.jpeg?cs=srgb&dl=pexels-mike-bird-100653.jpg&fm=jpg",
+        "name": "Car 22",
+        "brand": "BMW",
+        "type": "SUV",
+        "price": 80000,
+        "description": "An SUV that blends BMW's luxury with versatility and power.",
+        "rating": 4.6
+    },
+    {
+        "image": "https://www.bmw.com.bd/content/dam/bmw/common/all-models/5-series/sedan/2021/Highlights/bmw-5-series-sedan-sp-desktop.jpg.asset.1629365534507.jpg",
+        "name": "Car 23",
+        "brand": "BMW",
+        "type": "Convertible",
+        "price": 90000,
+        "description": "A convertible for those who enjoy wind-in-the-hair driving.",
+        "rating": 4.5
+    },
+    {
+        "image": "data:image/jpeg;base64,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",
+        "name": "Car 24",
+        "brand": "BMW",
+        "type": "Sports Car",
+        "price": 100000,
+        "description": "BMW's sports car that delivers thrills and precision handling.",
+        "rating": 4.7
+    }
+]

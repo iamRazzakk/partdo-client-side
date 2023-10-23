@@ -6,12 +6,11 @@ const AddCar = () => {
         const form = event.target
         const name = form.name.value;
         const price = form.price.value;
-        const category = form.category.value;
-        const details = form.details.value;
-        const photo = form.photo.value;
-        const newCar = { name, price, category, details, photo };
+        const brand = form.brand.value;
+        const description = form.description.value;
+        const image = form.image.value;
+        const newCar = { name, price, brand, description, image };
         console.log(newCar);
-        // send data to the server
         fetch('http://localhost:5000/car', {
             method: "POST",
             headers: {
@@ -60,13 +59,24 @@ const AddCar = () => {
                 </div>
                 {/*  */}
                 <div className="md:flex mb-8">
-                    <div className="form-control md:w-1/2">
+                    <div className="form-control py-6 md:w-1/2">
+                        <label>Choose a car:</label>
+                        <select name="brand" id="cars">
+                            <option value="BMW">BMW</option>
+                            <option value="Audi" selected>Audi</option>
+                            <option value="Bugatti" selected>Bugatti</option>
+                            <option value="Ferrari" selected>Ferrari</option>
+                            <option value="Lamborghini" selected>Lamborghini</option>
+                            <option value="Mercedes-Benz" selected>Mercedes-Benz</option>
+                        </select>
+                    </div>
+                    <div className="form-control md:w-1/2 ml-4">
                         <label className="label">
-                            <span className="label-text">Category</span>
+                            <span className="label-text">Rating</span>
                         </label>
                         <label className="input-group">
                             <span>Name</span>
-                            <input type="text" name="category" placeholder="Enter your Category" className="input input-bordered w-full" />
+                            <input type="text" name="description" placeholder="Details" className="input w-full input-bordered" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2 ml-4">
@@ -87,7 +97,7 @@ const AddCar = () => {
                         </label>
                         <label className="input-group">
                             <span>Name</span>
-                            <input type="text" name="photo" placeholder="Enter your Photo URL" className="input input-bordered w-full" />
+                            <input type="text" name="image" placeholder="Enter your Photo URL" className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>

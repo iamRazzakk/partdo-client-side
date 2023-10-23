@@ -1,0 +1,38 @@
+[
+    {
+      "carname": "Lamborghini Aventador",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/2023_Lamborghini_Aventador_Ultimae.jpg/280px-2023_Lamborghini_Aventador_Ultimae.jpg",
+      "description": "The Lamborghini Aventador is a powerful and luxurious supercar, known for its iconic design and high-performance V12 engine.",
+      "category": "Lamborghini"
+    },
+    {
+      "carname": "Lamborghini Urus",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Lamborghini_Urus_19.09.20_JM_%282%29_%28cropped%29.jpg/280px-Lamborghini_Urus_19.09.20_JM_%282%29_%28cropped%29.jpg",
+      "description": "The Lamborghini Urus is a high-performance SUV, combining Lamborghini's iconic style with practicality and a powerful engine.",
+      "category": "Lamborghini"
+    },
+    {
+      "carname": "Lamborghini Murciélago",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Lamborghini_Murci%C3%A9lago_LP-640_-_Flickr_-_Alexandre_Pr%C3%A9vot_%2840%29.jpg/280px-Lamborghini_Murci%C3%A9lago_LP-640_-_Flickr_-_Alexandre_Pr%C3%A9vot_%2840%29.jpg",
+      "description": "The Lamborghini Murciélago is an iconic V12 supercar, revered for its speed and distinctive scissor doors.",
+      "category": "Lamborghini"
+    },
+    {
+      "carname": "Lamborghini Diablo SE 30",
+      "img": "https://upload.wikimedia.org/wikipedia.commons/thumb/d/d3/1995_Lamborghini_Diablo_SE_30.jpg/280px-1995_Lamborghini_Diablo_SE_30.jpg",
+      "description": "The Lamborghini Diablo SE 30 is a limited edition supercar, known for its distinctive design and exceptional performance.",
+      "category": "Lamborghini"
+    },
+    {
+      "carname": "Lamborghini Reventón",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Lamborghini_Revent%C3%B3n.jpg/280px-Lamborghini_Revent%C3%B3n.jpg",
+      "description": "The Lamborghini Reventón is a rare and exclusive supercar, featuring a unique and aggressive design, inspired by fighter jets.",
+      "category": "Lamborghini"
+    },
+    {
+      "carname": "Lamborghini Supperleggera",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Lamborghini_Supperleggera-20180708.jpg/280px-Lamborghini_Supperleggergera-20180708.jpg",
+      "description": "The Lamborghini Supperleggera is a sporty and lightweight supercar known for its exceptional performance and Italian elegance.",
+      "category": "Lamborghini"
+    }
+  ]

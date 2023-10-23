@@ -1,9 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Probider/AuthProvider";
 import auth from "../../Firebase";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+// import Cart from "../../../Pages/Cart";
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
+    // const [cartItems, setCarItems] = useState([])
     const handleLogOut = () => {
         logOut()
             .then(result => {
@@ -13,6 +16,9 @@ const Navbar = () => {
                 console.error(error)
             })
     }
+    // const addToCart = (item) => {
+    //     setCarItems([...cartItems, item]);
+    // };
 
     const navLink = <>
         <li>
@@ -32,7 +38,7 @@ const Navbar = () => {
                     isPending ? "pending" : isActive ? "active" : ""
                 }
             >
-                Car
+                Car Brand
             </NavLink>
         </li>
         <li>
@@ -90,20 +96,25 @@ const Navbar = () => {
                                 isPending ? "pending" : isActive ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
                             }
                         >
-                            <p className="text-base font-semibold">Brand</p>
+                            <p className="text-base font-semibold">Car Brand</p>
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink
-                            to="/addCar"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
-                            }
-                        >
-                            <p className="text-base font-semibold">Add Car</p>
-
-                        </NavLink>
-                    </li>
+                    {user && (
+                        <li>
+                            <NavLink
+                                to="/addCar"
+                                className={({ isActive, isPending }) =>
+                                    isPending
+                                        ? "pending"
+                                        : isActive
+                                            ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500"
+                                            : ""
+                                }
+                            >
+                                <p className="text-base font-semibold">Add Car</p>
+                            </NavLink>
+                        </li>
+                    )}
                     <li>
                         <NavLink
                             to="/product"
@@ -116,32 +127,38 @@ const Navbar = () => {
                         </NavLink>
                     </li>
 
-                    <li>
-                        <NavLink
-                            to="/contact"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
-                            }
-                        >
-                            <p className="text-base font-semibold">Contact</p>
-                        </NavLink>
-                    </li>
+                    {
+                        user && (
+                            <li>
+                                <NavLink
+                                    to="/contact"
+                                    className={({ isActive, isPending }) =>
+                                        isPending ? "pending" : isActive ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
+                                    }
+                                >
+                                    <p className="text-base font-semibold">Contact</p>
+                                </NavLink>
+                            </li>
+                        )
+                    }
 
                 </ul>
             </div>
             <div className="navbar-end">
+                {/* <button onClick={() => addToCart(car)}>Add to Cart</button> */}
                 {user ? (
                     <>
                         <span>{user.displayName}</span>
                         <button onClick={handleLogOut} className="btn btn-sm">Logout</button>
                     </>
                 ) : (
-                    
+
                     <Link to="/login">
                         <button className="btn btn-sm">Login</button>
                     </Link>
                 )}
             </div>
+            {/* <Cart cartItems={cartItems} /> */}
         </div >
     );
 };

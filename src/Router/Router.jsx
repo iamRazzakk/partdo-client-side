@@ -10,12 +10,19 @@ import Register from "../Pages/Register/Register";
 import UpdateCar from "../Pages/UpdateCar/UpdateCar";
 import AddCar from "../Pages/AddCar/AddCar";
 import CarDetail from "../Pages/CarCollection";
+
 import CarCollection from "../Pages/CarCollection";
+import Error from "../Pages/Error/Error";
+import SingleCard from "../Pages/SingleCard";
+import EverCarDetail from "../Pages/EverCarDetail";
+// import SingleCard from "../Pages/SingleCard";
+// import CarDetail from "../Pages/CarDetail/CarDetail";
 
 const myCreatedRouter = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout></MainLayout>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: '/',
@@ -24,11 +31,11 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: '/car',
                 element: <Car></Car>,
-                loader: () => fetch('http://localhost:5000/car')
+                loader: ({ params }) => fetch(`http://localhost:5000/brandcar/${params.brand}`)
             },
             {
-                path: '/car/:id',
-                element: <CarDetail></CarDetail>
+                path: '/cardisplay/:brand',
+                element: <SingleCard></SingleCard>
             },
             {
                 path: '/addCar',
@@ -51,14 +58,19 @@ const myCreatedRouter = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path: '/updateCar',
-                element: <UpdateCar></UpdateCar>
+                path: '/updatecar',
+                element: <UpdateCar></UpdateCar>,
+                loader: ({ params }) => fetch(`http://localhost:5000/brandcar/${params.brand}`)
             },
             {
                 path: '/carDetail/:id',
                 element: <CarCollection></CarCollection>,
-                loader:()=>fetch('/carCard.json')
+                loader: () => fetch('/carCard.json')
 
+            },
+            {
+                path: '/singlecar/:carId',
+                element: <EverCarDetail></EverCarDetail>
             }
         ]
     }

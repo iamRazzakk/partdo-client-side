@@ -1,21 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Product = () => {
-    const [products, setProducts] = useState([]); // Use setProducts, not setProduct
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        // Initialize AOS with custom animation settings
         AOS.init({
-            duration: 1000, // Animation duration in milliseconds
-            offset: 100,   // Offset (in pixels) from the top of the element
+            duration: 1000, 
+            offset: 100,   
         });
 
-        fetch('/Product.json') // Update the URL to match your data file location
+        fetch('/Product.json')
             .then((res) => res.json())
             .then((data) => {
-                setProducts(data); // Use setProducts to update the state
+                setProducts(data); 
             })
             .catch((error) => {
                 console.error('Error fetching product data:', error);
@@ -26,7 +25,7 @@ const Product = () => {
         <div>
             <h1 className="text-7xl font-bold text-center mb-16 mt-16">Product Collection</h1>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4" data-aos="fade-up">
-                {products.map((product) => (
+                {products.map(product => (
                     <div key={product.id} className="card card-compact h-[450px] bg-base-100 shadow-xl">
                         <figure><img src={product.image} alt={product.item_name} /></figure>
                         <div className="card-body">

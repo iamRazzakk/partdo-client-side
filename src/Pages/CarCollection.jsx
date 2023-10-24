@@ -13,7 +13,8 @@ const AddCar = () => {
         const newCar = { name, price, category, details, photo, rating };
         console.log(newCar);
         // send data to the server
-        fetch(`http://localhost:5000/brandProduct/${Brand.brand}`, {
+       
+        fetch(`https://b8a10-brandshop-server-side-iam-razzakk.vercel.app/brandProduct/${Brand.brand}`, {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

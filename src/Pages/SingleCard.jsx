@@ -21,7 +21,7 @@ const SingleCard = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/car/${_id}`, {
+                fetch(`https://b8a10-brandshop-server-side-iam-razzakk.vercel.app/car/${_id}`, {
                     method: 'DELETE',
 
                 })
@@ -43,7 +43,7 @@ const SingleCard = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/brandcar/${brand}`)
+        fetch(`https://b8a10-brandshop-server-side-iam-razzakk.vercel.app/brandcar/${brand}`)
             .then(res => res.json())
             .then(data => {
                 setCars(data);

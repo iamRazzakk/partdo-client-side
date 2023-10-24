@@ -9,7 +9,6 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import UpdateCar from "../Pages/UpdateCar/UpdateCar";
 import AddCar from "../Pages/AddCar/AddCar";
-import CarDetail from "../Pages/CarCollection";
 
 import CarCollection from "../Pages/CarCollection";
 import Error from "../Pages/Error/Error";
@@ -33,7 +32,7 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: '/car',
                 element: <Car></Car>,
-                loader: ({ params }) => fetch(`http://localhost:5000/brandcar/${params.brand}`)
+                loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-iam-razzakk.vercel.app/brandcar/${params.brand}`)
             },
             {
                 path: '/cardisplay/:brand',
@@ -62,7 +61,7 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: '/updatecar/:id',
                 element: <PrivateRoute><UpdateCar></UpdateCar></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/car/${params.id}`)
+                loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-iam-razzakk.vercel.app/car/${params.id}`)
             },
             {
                 path: '/carDetail/:id',

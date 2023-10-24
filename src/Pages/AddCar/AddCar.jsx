@@ -11,7 +11,7 @@ const AddCar = () => {
         const image = form.image.value;
         const newCar = { name, price, brand, description, image };
         console.log(newCar);
-        fetch('http://localhost:5000/car', {
+        fetch('https://b8a10-brandshop-server-side-iam-razzakk.vercel.app/car', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

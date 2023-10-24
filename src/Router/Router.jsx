@@ -15,6 +15,8 @@ import CarCollection from "../Pages/CarCollection";
 import Error from "../Pages/Error/Error";
 import SingleCard from "../Pages/SingleCard";
 import EverCarDetail from "../Pages/EverCarDetail";
+import Cart from "../Pages/Cart";
+import PrivateRoute from "../Pages/PrivateRoute";
 // import SingleCard from "../Pages/SingleCard";
 // import CarDetail from "../Pages/CarDetail/CarDetail";
 
@@ -43,7 +45,7 @@ const myCreatedRouter = createBrowserRouter([
             },
             {
                 path: '/contact',
-                element: <Contact></Contact>
+                element: <PrivateRoute><Contact></Contact></PrivateRoute>
             },
             {
                 path: '/product',
@@ -59,7 +61,7 @@ const myCreatedRouter = createBrowserRouter([
             },
             {
                 path: '/updatecar/:id',
-                element: <UpdateCar></UpdateCar>,
+                element: <PrivateRoute><UpdateCar></UpdateCar></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/car/${params.id}`)
             },
             {
@@ -71,7 +73,11 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: '/singlecar/:carId',
                 element: <EverCarDetail></EverCarDetail>
-            }
+            },
+            {
+                path: '/addCart',
+                element: <Cart></Cart>
+            },
         ]
     }
 ]);

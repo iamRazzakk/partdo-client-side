@@ -1,9 +1,6 @@
 import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Probider/AuthProvider";
-import auth from "../../Firebase";
-import { AiOutlineShoppingCart } from "react-icons/ai";
-// import Cart from "../../../Pages/Cart";
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
     // const [cartItems, setCarItems] = useState([])
@@ -16,9 +13,8 @@ const Navbar = () => {
                 console.error(error)
             })
     }
-    // const addToCart = (item) => {
-    //     setCarItems([...cartItems, item]);
-    // };
+    console.log(user);
+
 
     const navLink = <>
         <li>
@@ -126,6 +122,17 @@ const Navbar = () => {
 
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink
+                            to="/addCart"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
+                            }
+                        >
+                            <p className="text-base font-semibold">Add cart</p>
+
+                        </NavLink>
+                    </li>
 
                     {
                         user && (
@@ -142,17 +149,25 @@ const Navbar = () => {
                         )
                     }
 
+
                 </ul>
             </div>
             <div className="navbar-end">
                 {/* <button onClick={() => addToCart(car)}>Add to Cart</button> */}
                 {user ? (
-                    <>
-                        <span>{user.displayName}</span>
-                        <button onClick={handleLogOut} className="btn btn-sm">Logout</button>
-                    </>
+                    <div className="flex items-center">
+                        <div className="w-10 h-10 rounded-full overflow-hidden">
+                            <img src={user.photoURL} alt="User Avatar" />
+                        </div>
+                        <p className="text-lg ml-2">{user.displayName}</p>
+                        <button
+                            className="btn btn-sm ml-2"
+                            onClick={handleLogOut}
+                        >
+                            Logout
+                        </button>
+                    </div>
                 ) : (
-
                     <Link to="/login">
                         <button className="btn btn-sm">Login</button>
                     </Link>

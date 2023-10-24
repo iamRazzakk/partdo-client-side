@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useCart } from './CartContext';
+import toast from 'react-hot-toast';
 
 const CarDetail = () => {
     const location = useLocation();
@@ -11,6 +12,14 @@ const CarDetail = () => {
     }
 
     const { id, img, title, description, brand, price, rating } = car;
+    const { dispatch } = useCart();
+
+    const addToCart = () => {
+        dispatch({ type: 'ADD_TO_CART', payload: car }); 
+
+        
+        
+    };
 
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -22,9 +31,8 @@ const CarDetail = () => {
                     <p>Price: ${price}</p>
                     <p>Rating: {rating}</p>
                     <div className='text-3xl mt-4'>
-                        <Link><button className='btn btn-link bg-white'>Add to Cart</button></Link>
+                        <button className='btn btn-link bg-white' onClick={addToCart}>Add to Cart</button>
                     </div>
-
                 </div>
             </div>
         </div>

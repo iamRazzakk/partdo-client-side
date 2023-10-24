@@ -15,19 +15,42 @@ const EverCarDetail = () => {
     }, [carId]);
     console.log(car);
 
+
+    const addToCard=()=>{
+       console.log("Cart");
+        
+       
+        fetch(`http://localhost:5000/addProducts`, {
+            method: 'POST',
+            headers: {
+                "content-type": "application/json",
+
+            },
+            body: JSON.stringify()
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.acknowledged) {
+                    console.log('successful your product add')
+                    
+                }
+            })
+    }
+
     return (
         <div>
             {car ? (
                 < div className='flex m-4 p-5'>
                     <div className='flex-1'>
-                        <img className='h-[40vh] md:h-[80vh]' src={car.image} alt={car.name} />
+                        <img className='h-[40vh] md:h-[80vh]' name="img" src={car.image} alt={car.name} />
                     </div>
                     <div className='flex-1 ml-4'>
-                        <h2 className='text-xl md:text-7xl mb-4 font-bold'>{car.type}</h2>
-                        <p className='md:text-xl mb-4 font-normal'>{car.description}</p>
+                        <h2 name="type" className='text-xl md:text-7xl mb-4 font-bold'>{car.type}</h2>
+                        <p name="description" className='md:text-xl mb-4 font-normal'>{car.description}</p>
                         {/* <button onClick={() => addToCart(car)}>Add to Cart</button> */}
                         {/* <button onClick={() => (car)}>Add to Cart</button> */}
-                        <button className='btn btn-link bg-white'>Add to Cart</button>
+                        <button className='btn btn-link bg-white' onClick={addToCard}>Add to Cart</button>
                     </div>
                 </div>
             ) : (

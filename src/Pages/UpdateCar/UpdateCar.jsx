@@ -6,6 +6,7 @@ const UpdateCar = () => {
     const car = useLoaderData();
     const [details, setDetails] = useState(car.details); // Initialize details with car details
     const { _id, name, price, brand, description, image } = car;
+    console.log(_id);
 
     const handleUpdateCar = (event) => {
         event.preventDefault();
@@ -23,11 +24,11 @@ const UpdateCar = () => {
             brand: newBrand,
             description: newDescription,
             image: newImage,
-            details: details, // Include details in the update
+            details: details,
         };
 
         // Send data to the server
-        fetch(`http://localhost:5000/brandcar/${newCar.brand}`, {
+        fetch(`http://localhost:5000/car/${_id}`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json',

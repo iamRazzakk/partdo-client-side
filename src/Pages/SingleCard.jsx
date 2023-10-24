@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../components/Probider/AuthProvider';
 
 const SingleCard = () => {
+    const { user } = useContext(AuthContext)
     const [cars, setCars] = useState([]);
+
     const { brand } = useParams();
 
     const handleDelete = (_id) => {
@@ -31,6 +34,8 @@ const SingleCard = () => {
                                 'Your Car Detail been deleted.',
                                 'success'
                             )
+                            const newCars = cars.filter(car => car._id !== _id)
+                            setCars(newCars)
                         }
                     })
             }
@@ -47,7 +52,7 @@ const SingleCard = () => {
 
     return (
         <div>
-            <h1 className='text-7xl text-center font-bold mb-10'>Car From {brand}</h1>
+            <h1 className='text-xl md:text-7xl text-center font-bold mb-10'>Car Collection From {brand}</h1>
             <div className='grid md:grid-cols-2 gap-5 lg:grid-cols-4'>
                 {cars.map(car => (
                     <div key={car._id}>
@@ -59,15 +64,22 @@ const SingleCard = () => {
                                 <p>Price: ${car.price}</p>
                                 <p>Description: {car.description}</p>
                                 <p>Rating: {car.rating}</p>
-                                <div className="card-actions justify-evenly">
-                                    <Link to={`/singlecar/${car._id}`}>
-                                        <button className='btn btn-link bg-white'>Car Detail</button>
-                                    </Link>
-                                    <Link to={`/updatecar/${car._id}`}>
-                                        <button className='btn btn-link bg-white'>Update</button>
-                                    </Link>
-                                    <button onClick={() => handleDelete(car._id)} className='btn btn-link bg-white'>Delete</button>
-                                </div>
+                                {
+                                    user ? (
+                                        <div className="card-actions justify-evenly">
+                                            <Link to={`/singlecar/${car._id}`}>
+                                                <button className='btn btn-link bg-white'>Car Detail</button>
+                                            </Link>
+                                            <Link to={`/updatecar/${car._id}`}>
+                                                <button className='btn btn-link bg-white'>Update</button>
+                                            </Link>
+                                            <button onClick={() => handleDelete(car._id)} className='btn btn-link bg-black'>Delete</button>
+                                        </div>
+                                    ) :
+                                        <Link to="/login">
+                                            <button className='btn btn-link bg-white'>Login</button>
+                                        </Link>
+                                }
                             </div>
                         </div>
                     </div>

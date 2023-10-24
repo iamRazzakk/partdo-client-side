@@ -1,9 +1,9 @@
 /* .container {
     width: 300px; /* Set your desired fixed width */
-    position: relative;
+    /* position: relative;
     overflow: hidden;
-  }
-  
+  } */
+/*   
   @keyframes slideLeft {
     0% {
       transform: translateX(0);
@@ -11,13 +11,13 @@
   
     100% {
       transform: translateX(100%);
-    }
-  }
+    } */
+  } */
   
-  .title-animation {
+  /* .title-animation {
     animation: slideLeft 10s linear infinite;
     white-space: nowrap; /* Prevent text from wrapping */
     position: absolute; /* Position the title within the container */
     top: 0; /* Adjust the top position as needed */
-  }
-   */
+  } */
+  

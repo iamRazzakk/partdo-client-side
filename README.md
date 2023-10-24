@@ -1,8 +1,19 @@
-# React + Vite
+# Parto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+in this project have some brand name and when you click in brand name its show you this Brand Car ..if you want to update it than click in update this btn go to another route and show a component if you can change it your needed..
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### requirements
+- ** 
+
+
+
+- [Node.js](https://nodejs.org/) - Version X.X.X
+- [NPM](https://www.npmjs.com/) - Version X.X.X
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/your-project.git

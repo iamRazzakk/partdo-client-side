@@ -1,4 +1,4 @@
-/* Add these styles to your CSS stylesheet */
+
 .card.zoomed {
     transform: scale(1.1); /* Zoom in by 10% */
     transition: transform 0.2s ease-in-out;

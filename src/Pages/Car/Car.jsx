@@ -1,4 +1,4 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import CarCard from './CarCard';
@@ -25,8 +25,8 @@ const Car = () => {
 
     return (
         <div>
-            <h1 className="md:text-7xl font-bold text-center md:mb-16">Car Collection</h1>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 p-10 gap-4" data-aos="fade-up">
+            <h2 className='uppercase text-center text-3xl md:text-5xl font-semibold mb-6 md:mb-10'>Car Brands</h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
                 {cars.map((car) => (
                     <CarCard key={car.id} car={car} />
                 ))}

@@ -8,7 +8,9 @@ const Home = () => {
     return (
         <div>
             <Header></Header>
-            <Car></Car>
+            <div className='md:mt-10'>
+                <Car></Car>
+            </div>
             <Product></Product>
             <Discount></Discount>
         </div>

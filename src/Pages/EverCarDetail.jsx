@@ -8,7 +8,7 @@ const EverCarDetail = () => {
     const [car, setCar] = useState();
 
     useEffect(() => {
-        fetch(`https://b8a10-brandshop-server-side-iam-razzakk.vercel.app/car/${carId}`)
+        fetch(`http://localhost:5001/car/${carId}`)
             .then((res) => res.json())
             .then((data) => setCar(data))
             .catch((error) => console.error(error));
@@ -20,7 +20,7 @@ const EverCarDetail = () => {
        console.log("Cart");
         
        
-        fetch(`https://b8a10-brandshop-server-side-iam-razzakk.vercel.app/addProducts`, {
+        fetch(`http://localhost:5001/addProducts`, {
             method: 'POST',
             headers: {
                 "content-type": "application/json",

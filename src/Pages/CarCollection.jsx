@@ -14,7 +14,7 @@ const AddCar = () => {
         console.log(newCar);
         // send data to the server
        
-        fetch(`https://b8a10-brandshop-server-side-iam-razzakk.vercel.app/brandProduct/${Brand.brand}`, {
+        fetch(`http://localhost:5001/brandProduct/${Brand.brand}`, {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

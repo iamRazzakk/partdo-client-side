@@ -28,7 +28,7 @@ const UpdateCar = () => {
         };
 
         // Send data to the server
-        fetch(`https://b8a10-brandshop-server-side-iam-razzakk.vercel.app/car/${_id}`, {
+        fetch(`http://localhost:5001/car/${_id}`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json',

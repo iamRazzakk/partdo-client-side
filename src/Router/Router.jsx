@@ -32,7 +32,7 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: '/car',
                 element: <Car></Car>,
-                loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-iam-razzakk.vercel.app/brandcar/${params.brand}`)
+                loader: ({ params }) => fetch(`http://localhost:5001/brandcar/${params.brand}`)
             },
             {
                 path: '/cardisplay/:brand',
@@ -61,7 +61,7 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: '/updatecar/:id',
                 element: <PrivateRoute><UpdateCar></UpdateCar></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-iam-razzakk.vercel.app/car/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5001/car/${params.id}`)
             },
             {
                 path: '/carDetail/:id',

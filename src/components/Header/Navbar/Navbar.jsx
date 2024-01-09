@@ -1,10 +1,34 @@
-import { useContext, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { AuthContext } from "../../Probider/AuthProvider";
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
     // const [cartItems, setCarItems] = useState([])
     const [navBg, setNavBg] = useState(false)
+    let { pathname } = useLocation();
+
+    useEffect(() => {
+        if (pathname === '/') {
+            setNavBg(false)
+
+        }
+        else {
+            setNavBg(true)
+        }
+    }, [pathname]);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY >= 80) {
+            setNavBg(true)
+        }
+        else {
+            if (pathname === '/') {
+                return setNavBg(false)
+            }
+            setNavBg(true)
+        }
+    })
+
     const handleLogOut = () => {
         logOut()
             .then(result => {
@@ -17,49 +41,49 @@ const Navbar = () => {
     console.log(user);
 
 
-    const navLink = <>
-        <li>
-            <NavLink
-                to="/"
-                className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
-                }
-            >
-                Home
-            </NavLink>
-        </li>
-        <li>
-            <NavLink
-                to="/car"
-                className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
-                }
-            >
-                Car Brand
-            </NavLink>
-        </li>
-        <li>
-            <NavLink
-                to="/product"
-                className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
-                }
-            >
-                Product
-            </NavLink>
-        </li>
-        <li>
-            <NavLink
-                to="/contact"
-                className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
-                }
-            >
-                Contact
-            </NavLink>
-        </li>
+    // const navLink = <>
+    //     <li>
+    //         <NavLink
+    //             to="/"
+    //             className={({ isActive, isPending }) =>
+    //                 isPending ? "pending" : isActive ? "active" : ""
+    //             }
+    //         >
+    //             Home
+    //         </NavLink>
+    //     </li>
+    //     <li>
+    //         <NavLink
+    //             to="/car"
+    //             className={({ isActive, isPending }) =>
+    //                 isPending ? "pending" : isActive ? "active" : ""
+    //             }
+    //         >
+    //             Car Brand
+    //         </NavLink>
+    //     </li>
+    //     <li>
+    //         <NavLink
+    //             to="/product"
+    //             className={({ isActive, isPending }) =>
+    //                 isPending ? "pending" : isActive ? "border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
+    //             }
+    //         >
+    //             Product
+    //         </NavLink>
+    //     </li>
+    //     <li>
+    //         <NavLink
+    //             to="/contact"
+    //             className={({ isActive, isPending }) =>
+    //                 isPending ? "pending" : isActive ? "active" : ""
+    //             }
+    //         >
+    //             Contact
+    //         </NavLink>
+    //     </li>
 
-    </>
+    // </>
     const navLink2 = <>
         <ul className="menu menu-horizontal px-1">
             <li className="">
@@ -140,7 +164,7 @@ const Navbar = () => {
         </ul>
     </>
     return (
-        <div className="navbar  ">
+        <div className={navBg ? "sticky top-0 z-10 flex navbar bg-black text-white" : "sticky flex top-0 navbar z-10"}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

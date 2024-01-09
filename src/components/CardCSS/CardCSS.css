@@ -74,3 +74,6 @@
     cursor: pointer;
     width: 120px;
 } */
+.cardImg:hover{
+background-image: url();
+}

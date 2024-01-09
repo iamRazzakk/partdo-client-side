@@ -7,7 +7,7 @@ const CarCard = ({ car }) => {
 
     setTimeout(() => {
         setLoading(false);
-    }, 1500);
+    }, 1000);
 
     return (
         <div>

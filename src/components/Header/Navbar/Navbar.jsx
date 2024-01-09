@@ -164,7 +164,7 @@ const Navbar = () => {
         </ul>
     </>
     return (
-        <div className={navBg ? "sticky top-0 z-10 flex navbar bg-gray-500 rounded text-white" : "sticky flex top-0 navbar z-10"}>
+        <div className={navBg ? "sticky top-0 z-10 flex navbar bg-gray-500 text-white rounded" : "sticky flex top-0 navbar z-10"}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

@@ -164,7 +164,7 @@ const Navbar = () => {
         </ul>
     </>
     return (
-        <div className={navBg ? "sticky top-0 z-10 flex navbar bg-black text-white" : "sticky flex top-0 navbar z-10"}>
+        <div className={navBg ? "sticky top-0 z-10 flex navbar bg-gray-500 rounded text-white" : "sticky flex top-0 navbar z-10"}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -188,20 +188,20 @@ const Navbar = () => {
                             <img src={user.photoURL} alt="User Avatar" />
                         </div>
                         <p className="text-lg ml-2">{user.displayName}</p>
-                        <button
-                            className="btn btn-sm ml-2"
-                            onClick={handleLogOut}
-                        >
-                            Logout
+                        <button onClick={handleLogOut} className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-indigo-600 ">
+                            <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-indigo-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+                            <span className="relative text-indigo-600 transition duration-300 group-hover:text-white ease">Login</span>
                         </button>
                     </div>
                 ) : (
                     <Link to="/login">
-                        <button className="btn btn-sm">Login</button>
+                        <button className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-indigo-600 ">
+                            <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-indigo-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+                            <span className="relative text-indigo-600 transition duration-300 group-hover:text-white ease">Login</span>
+                        </button>
                     </Link>
                 )}
             </div>
-            {/* <Cart cartItems={cartItems} /> */}
         </div >
     );
 };

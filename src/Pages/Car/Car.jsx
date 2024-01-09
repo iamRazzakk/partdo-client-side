@@ -25,7 +25,7 @@ const Car = () => {
 
     return (
         <div>
-            <h2 className='uppercase text-center text-3xl md:text-5xl font-semibold mb-6 md:mb-10'>Car Brands</h2>
+            <h2 className='uppercase md:mt-8 text-center text-3xl md:text-5xl font-semibold mb-6 md:mb-10'>Car Brands</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
                 {cars.map((car) => (
                     <CarCard key={car.id} car={car} />

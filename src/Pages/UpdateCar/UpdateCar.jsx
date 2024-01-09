@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const UpdateCar = () => {
     const car = useLoaderData();
-    const [details, setDetails] = useState(car.details); // Initialize details with car details
+    const [details, setDetails] = useState(car.details); 
     const { _id, name, price, brand, description, image } = car;
     console.log(_id);
 

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Header from '../../components/Header/Header';
 import Car from '../Car/Car';
 import Product from '../Product/Product';

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import  { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import { FcGoogle } from "react-icons/fc";
@@ -19,7 +19,6 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 toast.success("Login successfully.");
-                e.target.reset();
                 navigate('/');
             })
             .catch(error => {

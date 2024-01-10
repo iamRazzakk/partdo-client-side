@@ -122,7 +122,7 @@ const Navbar = () => {
                     </NavLink>
                 </li>
             )}
-            <li>
+            {/* <li>
                 <NavLink
                     to="/product"
                     className={({ isActive, isPending }) =>
@@ -132,7 +132,7 @@ const Navbar = () => {
                     <p className="text-base font-semibold">Product</p>
 
                 </NavLink>
-            </li>
+            </li> */}
             <li>
                 <NavLink
                     to="/addCart"

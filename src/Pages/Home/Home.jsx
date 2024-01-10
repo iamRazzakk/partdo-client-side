@@ -3,8 +3,9 @@ import Header from '../../components/Header/Header';
 import Car from '../Car/Car';
 import Product from '../Product/Product';
 import Discount from '../Discount/Discount';
-import TESTIMONIAL from '../../components/TESTIMONIAL/TESTIMONIAL';
+// import TESTIMONIAL from '../../components/TESTIMONIAL/TESTIMONIAL';
 import FAQ from '../../components/FAQ/FAQ';
+import TESTIMONIAL from '../../components/TESTIMONIAL/TESTIMONIAL';
 
 const Home = () => {
     return (

@@ -59,7 +59,7 @@ const AddCar = () => {
                                     <span className="label-text">Car Name</span>
                                 </label>
                                 <label className="input-group">
-                                    <span>Name</span>
+                                    {/* <span>Name</span> */}
                                     <input type="text" name="name" placeholder="Enter your Car name" className="input input-bordered w-full" />
                                 </label>
                             </div>
@@ -68,7 +68,7 @@ const AddCar = () => {
                                     <span className="label-text">Price</span>
                                 </label>
                                 <label className="input-group">
-                                    <span>Name</span>
+                                    {/* <span>Name</span> */}
                                     <input type="text" name="price" placeholder="Total Price" className="input w-full input-bordered" />
                                 </label>
                             </div>
@@ -91,7 +91,7 @@ const AddCar = () => {
                                     <span className="label-text">Rating</span>
                                 </label>
                                 <label className="input-group">
-                                    <span>Name</span>
+                                    {/* <span>Name</span> */}
                                     <input type="text" name="description" placeholder="Details" className="input w-full input-bordered" />
                                 </label>
                             </div>
@@ -100,7 +100,7 @@ const AddCar = () => {
                                     <span className="label-text">Details</span>
                                 </label>
                                 <label className="input-group">
-                                    <span>Name</span>
+                                    {/* <span>Name</span> */}
                                     <input type="text" name="details" placeholder="Details" className="input w-full input-bordered" />
                                 </label>
                             </div>
@@ -112,12 +112,21 @@ const AddCar = () => {
                                     <span className="label-text">Photo URL</span>
                                 </label>
                                 <label className="input-group">
-                                    <span>Name</span>
-                                    <input type="text" name="image" placeholder="Enter your Photo URL" className="input input-bordered w-full" />
+                                    {/* <span>Name</span> */}
+                                    <input type="text" name="image" placeholder="Enter your imgbb direct Photo URL" className="input input-bordered w-full" />
                                 </label>
                             </div>
                         </div>
-                        <input type="submit" value="Add Car Detail" className="btn btn-block" />
+
+                        <button className="relative flex items-center justify-center w-full px-5 py-3 overflow-hidden font-bold rounded-full group">
+                            <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-black opacity-[3%]"></span>
+                            <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-blue-600 opacity-100 group-hover:-translate-x-8"></span>
+                            <span className="relative w-full text-center text-black transition-colors duration-200 ease-in-out group-hover:text-black">Add Car Detail</span>
+                            <span className="absolute inset-0 border-2 border-black rounded-full"></span>
+                        </button>
+
+
+                        {/* <input type="submit" value="Add Car Detail" className="btn btn-block" /> */}
                     </form>
                 </div>
 

@@ -1,24 +1,28 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+
+import { useLocation } from 'react-router-dom';
 import { useCart } from './CartContext';
-import toast from 'react-hot-toast';
+import { CircleLoader } from 'react-spinners';
 
 const CarDetail = () => {
     const location = useLocation();
     const car = location.state.car;
 
     if (!car) {
-        return <div>Loading...</div>;
+        return (
+            <div className="flex items-center justify-center">
+                <CircleLoader
+                    color="#000"
+                    size={100}
+                />
+            </div>
+        );
     }
 
     const { id, img, title, description, brand, price, rating } = car;
     const { dispatch } = useCart();
 
     const addToCart = () => {
-        dispatch({ type: 'ADD_TO_CART', payload: car }); 
-
-        
-        
+        dispatch({ type: 'ADD_TO_CART', payload: car });
     };
 
     return (

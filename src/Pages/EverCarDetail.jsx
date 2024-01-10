@@ -1,6 +1,8 @@
 // EverCarDetail.jsx
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
+import Rating from 'react-rating';
 import { useParams } from 'react-router-dom';
+import { CircleLoader } from 'react-spinners';
 
 const EverCarDetail = () => {
     const { carId } = useParams();
@@ -16,10 +18,10 @@ const EverCarDetail = () => {
     console.log(car);
 
 
-    const addToCard=()=>{
-       console.log("Cart");
-        
-       
+    const addToCard = () => {
+        console.log("Cart");
+
+
         fetch(`http://localhost:5001/addProducts`, {
             method: 'POST',
             headers: {
@@ -33,7 +35,7 @@ const EverCarDetail = () => {
                 console.log(data);
                 if (data.acknowledged) {
                     console.log('successful your product add')
-                    
+
                 }
             })
     }
@@ -47,14 +49,24 @@ const EverCarDetail = () => {
                     </div>
                     <div className='flex-1 ml-4'>
                         <h2 name="type" className='text-xl md:text-7xl mb-4 font-bold'>{car.type}</h2>
+                        <p name="description" className='md:text-xl mb-4 font-normal'>{car.brand}</p>
+                        <p name="description" className='md:text-xl mb-4 font-normal'>${car.price}</p>
                         <p name="description" className='md:text-xl mb-4 font-normal'>{car.description}</p>
+                        <Rating
+                            initialRating={car.rating}
+                        />
                         {/* <button onClick={() => addToCart(car)}>Add to Cart</button> */}
                         {/* <button onClick={() => (car)}>Add to Cart</button> */}
                         <button className='btn btn-link bg-white' onClick={addToCard}>Add to Cart</button>
                     </div>
                 </div>
             ) : (
-                <p>Loading car details...</p>
+                <div className="flex items-center justify-center">
+                    <CircleLoader
+                        color="#000"
+                        size={100}
+                    />
+                </div>
             )
             }
         </div >

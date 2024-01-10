@@ -29,10 +29,10 @@ const Register = () => {
     }
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-[url('https://i.ibb.co/Y7B107j/bugatti1.png')]">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Sing Up!</h1>
+                        <h1 className="text-2xl md:text-5xl font-bold">Sing Up!</h1>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleAddedUser} className="card-body">

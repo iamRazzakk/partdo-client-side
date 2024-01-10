@@ -7,9 +7,9 @@ const Header = () => {
             <div className='h-[100vh] relative w-full'>
                 <video autoPlay muted loop className='rounded-lg h-[100vh] object-cover w-full mx-auto form-control' src={carVideo}>
                 </video>
-                <div className='w-[50%] font-salsa absolute -mb-28 space-y-4 text-white items-center md:p-10 h-[100vh]  md:pt-40 left-0 top-0 bg-gradient-to-r from-[#2a2727] to-[rgba(21,21,21,0)]'>
-                    <h1 className='text-white mb-4 text-5xl font-bold'>Car Market Hub: <span className='text-3xl'>Where Transactions Thrive.</span></h1>
-                    <p className='mb-4 text-white text-xl'>Sell your car effortlessly at Partodo. Experience transparent transactions and seamless connections. Join us in shaping the future of car ownership – start selling today! </p>
+                <div className='w-[50%] sm:mt-28 md:mt-0 font-salsa absolute md:-mb-28 space-y-4 text-white items-center md:p-10 h-[100vh]  md:pt-40 left-0 top-0 bg-gradient-to-r from-[#2a2727] to-[rgba(21,21,21,0)]'>
+                    <h1 className='text-white mt-10 mb-4 text-xl md:text-5xl font-bold'>Car Market Hub: <span className='md:text-3xl'>Where Transactions Thrive.</span></h1>
+                    <p className='mb-4 text-white md:text-xl'>Sell your car effortlessly at Partodo. Experience transparent transactions and seamless connections. Join us in shaping the future of car ownership – start selling today! </p>
                     <button>
                         <Link to='car' className=" relative px-5 py-3 overflow-hidden font-medium text-white bg-black border border-black rounded-lg mt-6 shadow-inner group">
                             <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-white group-hover:w-full ease"></span>

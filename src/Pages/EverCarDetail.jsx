@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Rating from 'react-rating';
 import { Link, useParams } from 'react-router-dom';
 import { CircleLoader } from 'react-spinners';
+import Swal from 'sweetalert2';
 
 const EverCarDetail = () => {
     const { carId } = useParams();
@@ -16,8 +17,6 @@ const EverCarDetail = () => {
             .catch((error) => console.error(error));
     }, [carId]);
     // console.log(car);
-
-
     const addToCard = () => {
 
       car.id=car._id
@@ -36,7 +35,7 @@ const EverCarDetail = () => {
             .then(data=> {
                 console.log(data);
                 if (data.acknowledged) {
-                    console.log('successful your product add')
+                    Swal.fire("Car Add on Cart !");
                 }
             })
     }
@@ -44,11 +43,11 @@ const EverCarDetail = () => {
     return (
         <div>
             {car ? (
-                < div className='flex m-4 p-5'>
-                    <div className='flex-1'>
+                < div className='md:flex m-4 p-5'>
+                    <div className='flex-1 p-4'>
                         <img className='h-[40vh] md:h-[80vh]' name="img" src={car.image} alt={car.name} />
                     </div>
-                    <div className='flex-1 ml-4'>
+                    <div className='flex-1 ml-4 p-4'>
                         <h2 name="type" className='text-xl md:text-7xl mb-4 font-bold'>{car.type}</h2>
                         <p name="description" className='md:text-xl mb-4 font-normal'>{car.brand}</p>
                         <p name="description" className='md:text-xl mb-4 font-normal'>${car.price}</p>

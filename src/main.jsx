@@ -8,10 +8,10 @@ import AuthProvider from './components/Probider/AuthProvider'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className='font-salsa w-[1280px] mx-auto'>
-      <AuthProvider>
-        <RouterProvider router={myCreatedRouter}></RouterProvider>
-      </AuthProvider>
-    </div>
+      <div className='font-salsa lg:w-[1280px] mx-auto'>
+        <AuthProvider>
+          <RouterProvider router={myCreatedRouter}></RouterProvider>
+        </AuthProvider>
+      </div>
   </React.StrictMode>,
 )

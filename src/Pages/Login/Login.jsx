@@ -42,13 +42,13 @@ const Login = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-[url('https://i.ibb.co/dJG9qL2/banner-07.jpg')]">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
+                        <h1 className="text-2xl md:text-5xl text-white font-bold">Login now!</h1>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleSignIn} className="card-body">
+                        <form onSubmit={handleSignIn} className="card-body w-full">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -69,7 +69,7 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                             <p className='text-center'>Or</p>
-                            <p className="mx-auto text-2xl" onClick={handleGoogleSignIn}>
+                            <p className="mx-auto text-2xl cursor-pointer" onClick={handleGoogleSignIn}>
                                 <FcGoogle />
                             </p>
                             <hr />

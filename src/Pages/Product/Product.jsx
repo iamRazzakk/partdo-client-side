@@ -11,8 +11,8 @@ const Product = () => {
 
     return (
         <div>
-            <h1 className="text-7xl font-bold text-center mb-16 mt-16">Our Service</h1>
-            <div className='mt-32 max-w-6xl mx-auto px-3 md:px-8 lg:px-0'>
+            <h1 className="text-3xl underline md:text-7xl font-bold text-center mt-6 mb-6 md:mb-16 md:mt-16">Our Service</h1>
+            <div className='md:mt-32 max-w-6xl mx-auto px-3 md:px-8 lg:px-0'>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2'>
                     <div className='lg:text-end'>
                         <div data-aos="fade-right">

@@ -31,7 +31,7 @@ const myCreatedRouter = createBrowserRouter([
             },
             {
                 path: '/car',
-                element: <Car></Car>,
+                element: <PrivateRoute><Car></Car></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5001/brandcar/${params.brand}`)
             },
             {
@@ -75,7 +75,7 @@ const myCreatedRouter = createBrowserRouter([
             },
             {
                 path: '/addcart',
-                element: <Cart></Cart>
+                element: <PrivateRoute><Cart></Cart></PrivateRoute>
             },
         ]
     }

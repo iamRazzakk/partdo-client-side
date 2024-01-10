@@ -13,9 +13,9 @@ import { Pagination } from 'swiper/modules';
 const TESTIMONIAL = () => {
     return (
         <div className='md:mt-40'>
-            <h1 className='text-center font-bold text-7xl'>What They Say About Us ?</h1>
-            <div className='flex'>
-                <div className='flex-1 w-1/2 h-full'>
+            <h1 className='text-3xl underline md:text-7xl font-bold text-center mt-6 mb-6 md:mb-16 md:mt-16'>What They Say About Us ?</h1>
+            <div className='md:flex'>
+                <div className='flex-1 p-4 md:w-1/2 h-full'>
                     <Swiper
                         pagination={{
                             dynamicBullets: true,

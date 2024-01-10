@@ -1,6 +1,8 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import castumer1 from '../../../public/avatar-01.jpg'
+import castumer2 from '../../../public/avatar-02.jpg'
+import castumer3 from '../../../public/avatar-03.jpg'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,10 +12,10 @@ import whatSayPublic from '../../../public/whatssay.png'
 import { Pagination } from 'swiper/modules';
 const TESTIMONIAL = () => {
     return (
-        <div className='lg-w-[1280px]'>
-            <h1>What They Say About Us ?</h1>
+        <div className='md:mt-40'>
+            <h1 className='text-center font-bold text-7xl'>What They Say About Us ?</h1>
             <div className='flex'>
-                <div className='flex-1 w-1/2'>
+                <div className='flex-1 w-1/2 h-full'>
                     <Swiper
                         pagination={{
                             dynamicBullets: true,
@@ -21,15 +23,33 @@ const TESTIMONIAL = () => {
                         modules={[Pagination]}
                         className="mySwiper"
                     >
-                        <SwiperSlide>Slide 1</SwiperSlide>
-                        <SwiperSlide>Slide 2</SwiperSlide>
-                        <SwiperSlide>Slide 3</SwiperSlide>
-                        <SwiperSlide>Slide 4</SwiperSlide>
-                        <SwiperSlide>Slide 5</SwiperSlide>
-                        <SwiperSlide>Slide 6</SwiperSlide>
-                        <SwiperSlide>Slide 7</SwiperSlide>
-                        <SwiperSlide>Slide 8</SwiperSlide>
-                        <SwiperSlide>Slide 9</SwiperSlide>
+                        <SwiperSlide>
+                            <div className='md:p-28'>
+                                <p className='leading-8 mb-4 text-xl'>I recently purchased one of your cars, and it has been a joy to drive. The sleek design and advanced features make it stand out. Thank you for creating a vehicle that combines style and performance!</p>
+                                <div className='flex  items-center gap-4'>
+                                    <img className='h-16  w-16 rounded-full' src={castumer1} alt="" />
+                                    <p>Shamim Al Mamun</p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className='md:p-28'>
+                                <p className='leading-8 mb-4 text-xl'>I recently purchased one of your cars, and it has been a joy to drive. The sleek design and advanced features make it stand out. Thank you for creating a vehicle that combines style and performance!</p>
+                                <div className='flex  items-center gap-4 '>
+                                    <img className='h-16  w-16 rounded-full' src={castumer2} alt="" />
+                                    <p>Mahfuza Rima</p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className='md:p-28'>
+                                <p className='leading-8 mb-4 text-xl'>I recently purchased one of your cars, and it has been a joy to drive. The sleek design and advanced features make it stand out. Thank you for creating a vehicle that combines style and performance!</p>
+                                <div className='flex  items-center gap-4'>
+                                    <img className='h-16  w-16 rounded-full' src={castumer3} alt="" />
+                                    <p>Md Abdur Razzak Rakib</p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
                     </Swiper>
                 </div>
                 <div className='flex-1 '>

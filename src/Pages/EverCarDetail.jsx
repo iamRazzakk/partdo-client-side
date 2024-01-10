@@ -1,7 +1,7 @@
 // EverCarDetail.jsx
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Rating from 'react-rating';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { CircleLoader } from 'react-spinners';
 
 const EverCarDetail = () => {
@@ -15,27 +15,28 @@ const EverCarDetail = () => {
             .then((data) => setCar(data))
             .catch((error) => console.error(error));
     }, [carId]);
-    console.log(car);
+    // console.log(car);
 
 
     const addToCard = () => {
-        console.log("Cart");
 
+      car.id=car._id
+      delete car._id
+      console.log(car);
 
+      console.log(car);
         fetch(`http://localhost:5001/addProducts`, {
             method: 'POST',
             headers: {
                 "content-type": "application/json",
-
             },
-            body: JSON.stringify()
+            body: JSON.stringify(car)
         })
             .then(res => res.json())
-            .then(data => {
+            .then(data=> {
                 console.log(data);
                 if (data.acknowledged) {
                     console.log('successful your product add')
-
                 }
             })
     }
@@ -55,9 +56,9 @@ const EverCarDetail = () => {
                         <Rating
                             initialRating={car.rating}
                         />
-                        {/* <button onClick={() => addToCart(car)}>Add to Cart</button> */}
-                        {/* <button onClick={() => (car)}>Add to Cart</button> */}
-                        <button className='btn btn-link bg-white' onClick={addToCard}>Add to Cart</button>
+                        {/* <Link to={'addcart'}> */}
+                            <button className='btn btn-link bg-white' onClick={addToCard}>Add to Cart</button>
+                        {/* </Link> */}
                     </div>
                 </div>
             ) : (

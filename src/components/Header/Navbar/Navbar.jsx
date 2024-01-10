@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AuthContext } from "../../Probider/AuthProvider";
+import { FaCartPlus } from "react-icons/fa";
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
     // const [cartItems, setCarItems] = useState([])
@@ -181,6 +182,9 @@ const Navbar = () => {
                 {navLink2}
             </div>
             <div className="navbar-end">
+                <FaCartPlus className="text-4xl md:mr-2">
+
+                </FaCartPlus>
                 {/* <button onClick={() => addToCart(car)}>Add to Cart</button> */}
                 {user ? (
                     <div className="flex items-center">

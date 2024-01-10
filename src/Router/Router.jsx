@@ -74,7 +74,7 @@ const myCreatedRouter = createBrowserRouter([
                 element: <EverCarDetail></EverCarDetail>
             },
             {
-                path: '/addCart',
+                path: '/addcart',
                 element: <Cart></Cart>
             },
         ]

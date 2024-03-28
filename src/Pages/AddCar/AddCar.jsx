@@ -18,7 +18,7 @@ const AddCar = () => {
         const image = form.image.value;
         const newCar = { name, price, brand, description, image };
         console.log(newCar);
-        fetch('http://localhost:5001/car', {
+        fetch('https://partdo.vercel.app/car', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

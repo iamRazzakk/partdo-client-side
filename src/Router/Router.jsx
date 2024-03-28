@@ -32,7 +32,7 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: '/car',
                 element: <PrivateRoute><Car></Car></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5001/brandcar/${params.brand}`)
+                loader: ({ params }) => fetch(`https://partdo.vercel.app/brandcar/${params.brand}`)
             },
             {
                 path: '/cardisplay/:brand',
@@ -61,7 +61,7 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: '/updatecar/:id',
                 element: <PrivateRoute><UpdateCar></UpdateCar></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5001/car/${params.id}`)
+                loader: ({ params }) => fetch(`https://partdo.vercel.app/car/${params.id}`)
             },
             {
                 path: '/carDetail/:id',

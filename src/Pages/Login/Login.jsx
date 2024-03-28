@@ -1,8 +1,9 @@
-import  { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from '../../components/Probider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
     const { signInUser, singInWithGoogle } = useContext(AuthContext);
@@ -43,6 +44,11 @@ const Login = () => {
     return (
         <div>
             <div className="hero min-h-screen bg-[url('https://i.ibb.co/dJG9qL2/banner-07.jpg')]">
+                <Helmet>
+                    <title>
+                        Partdo || Login
+                    </title>
+                </Helmet>
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
                         <h1 className="text-2xl md:text-5xl text-white font-bold">Login now!</h1>
@@ -69,9 +75,9 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                             <p className='text-center'>Or</p>
-                            <p className="mx-auto text-2xl cursor-pointer" onClick={handleGoogleSignIn}>
+                            <button className="mx-auto text-2xl cursor-pointer" onClick={handleGoogleSignIn}>
                                 <FcGoogle />
-                            </p>
+                            </button>
                             <hr />
                             <p>If you are new here, please<Link to={'/Register'}>
                                 <p className='text-blue-600 font-bold'> Register</p>

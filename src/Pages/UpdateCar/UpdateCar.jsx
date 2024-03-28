@@ -28,7 +28,7 @@ const UpdateCar = () => {
         };
 
         // Send data to the server
-        fetch(`http://localhost:5001/car/${_id}`, {
+        fetch(`https://partdo.vercel.app/car/${_id}`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json',

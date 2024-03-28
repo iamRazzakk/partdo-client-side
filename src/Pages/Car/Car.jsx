@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import CarCard from './CarCard';
+import { Helmet } from 'react-helmet-async';
 
 const Car = () => {
     const [cars, setCars] = useState([]);
@@ -25,6 +26,11 @@ const Car = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>
+                    Partdo
+                </title>
+            </Helmet>
             <h2 className='text-3xl underline md:text-7xl font-bold text-center mt-6 mb-6 md:mb-16 md:mt-16'>Car Brands</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
                 {cars.map((car) => (

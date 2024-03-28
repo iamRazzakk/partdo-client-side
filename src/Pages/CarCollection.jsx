@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 
 const AddCar = () => {
@@ -13,8 +14,8 @@ const AddCar = () => {
         const newCar = { name, price, category, details, photo, rating };
         console.log(newCar);
         // send data to the server
-       
-        fetch(`http://localhost:5001/brandProduct/${Brand.brand}`, {
+
+        fetch(`https://partdo.vercel.app/brandProduct/${Brand.brand}`, {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -36,7 +37,13 @@ const AddCar = () => {
     }
 
     return (
+
         <div className="bg-[#f4f3f0] p-24">
+            <Helmet>
+                <title>
+                    Partdo || Add Car
+                </title>
+            </Helmet>
             <h1 className="text-3xl font-extrabold text-center">Add a Car</h1>
             <form onSubmit={handleAddCoffee}>
                 {/* form name and quantity name */}

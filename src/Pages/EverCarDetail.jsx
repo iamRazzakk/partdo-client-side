@@ -11,7 +11,7 @@ const EverCarDetail = () => {
     const [car, setCar] = useState();
 
     useEffect(() => {
-        fetch(`http://localhost:5001/car/${carId}`)
+        fetch(`https://partdo.vercel.app/car/${carId}`)
             .then((res) => res.json())
             .then((data) => setCar(data))
             .catch((error) => console.error(error));
@@ -24,7 +24,7 @@ const EverCarDetail = () => {
       console.log(car);
 
       console.log(car);
-        fetch(`http://localhost:5001/addProducts`, {
+        fetch(`https://partdo.vercel.app/addProducts`, {
             method: 'POST',
             headers: {
                 "content-type": "application/json",

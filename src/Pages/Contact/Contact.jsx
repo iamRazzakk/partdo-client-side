@@ -3,6 +3,7 @@ import { MdLocationPin } from "react-icons/md";
 import { IoIosMail } from "react-icons/io";
 import { useState } from "react";
 import { CircleLoader } from "react-spinners";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -38,6 +39,11 @@ const Contact = () => {
                 ) : (
 
                     <div className="font-jost">
+                        <Helmet>
+                            <title>
+                                Partdo || Contact
+                            </title>
+                        </Helmet>
                         <div className="mt-4">
                             <img className="w-[95%] rounded-lg h-80 object-cover m-auto" src="https://cdn.create.vista.com/api/media/small/266368826/stock-photo-finishing-up-a-meeting-handshake-of-two-happy-business-people-a" alt="Contact img" />
                         </div>

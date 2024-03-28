@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { CircleLoader } from 'react-spinners';
 
 const Cart = () => {
@@ -6,7 +7,7 @@ const Cart = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5001/addProducts')
+        fetch('https://partdo.vercel.app/addProducts')
             .then(data => data.json())
             .then(res => {
                 setCartCars(res);
@@ -26,6 +27,11 @@ const Cart = () => {
                 </div>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <Helmet>
+                        <title>
+                            Partdo || Cart
+                        </title>
+                    </Helmet>
                     {cartCars.map(cartCar => (
                         <div className="card h-52 card-side bg-base-100 shadow-xl" key={cartCar._id}>
                             <figure><img className="w-96" src={cartCar.image} alt="Car" /></figure>

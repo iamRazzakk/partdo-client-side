@@ -2,11 +2,27 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../components/Probider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
+import { Helmet } from 'react-helmet-async';
+import { FcGoogle } from 'react-icons/fc';
+import Swal from 'sweetalert2';
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext)
+    const [error, setError] = useState(null);
+    const { createUser, singInWithGoogle } = useContext(AuthContext)
     const [haveUser, setHaveUser] = useState(false);
     const navigate = useNavigate()
+    const handleGoogleSignIn = () => {
+        singInWithGoogle()
+            .then((result) => {
+                console.log(result.user);
+                Swal.fire("Login Successfully!");
+                navigate('/');
+            })
+            .catch((error) => {
+                console.error(error);
+                setError('Login failed. Please check your Google Sign-In.');
+            });
+    };
     const handleAddedUser = e => {
         e.preventDefault()
         const form = e.target;
@@ -30,6 +46,11 @@ const Register = () => {
     return (
         <div>
             <div className="hero min-h-screen bg-[url('https://i.ibb.co/Y7B107j/bugatti1.png')]">
+                <Helmet>
+                    <title>
+                        Partdo || SingUp
+                    </title>
+                </Helmet>
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
                         <h1 className="text-2xl md:text-5xl font-bold">Sing Up!</h1>
@@ -61,6 +82,9 @@ const Register = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>
+                            <button className="mx-auto text-2xl cursor-pointer" onClick={handleGoogleSignIn}>
+                                <FcGoogle />
+                            </button>
                             <p>Have an account? <Link to={'/login'}><span className='font-bold text-blue-600'>Login</span></Link></p>
                             <Toaster></Toaster>
                         </form>

@@ -22,7 +22,7 @@ const SingleCard = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5001/car/${_id}`, {
+                fetch(`https://partdo.vercel.app/car/${_id}`, {
                     method: 'DELETE',
 
                 })
@@ -44,7 +44,7 @@ const SingleCard = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5001/brandcar/${brand}`)
+        fetch(`https://partdo.vercel.app/brandcar/${brand}`)
             .then(res => res.json())
             .then(data => {
                 setCars(data);

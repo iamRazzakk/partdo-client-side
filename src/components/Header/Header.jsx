@@ -1,4 +1,5 @@
 // import './Navbar/Header.css'
+import Typewriter from 'typewriter-effect';
 
 import { Helmet } from 'react-helmet-async';
 import headerImg from '../../assets/slider-bg.jpg'
@@ -17,12 +18,39 @@ const Header = () => {
                     Partdo
                 </title>
             </Helmet>
-            <div className='h-[86vh] relative w-full mb-32'>
-                <img src={headerImg} className='relative rounded-lg' alt="" />
-                <img data-aos="fade-down" src={headerCar} className='absolute lg:-mt-96 lg:ml-28' alt="" />
-                <div className='absolute lg:-mt-[520px] lg:ml-96 w-2/3'>
-                    <h1 data-aos="fade-down" className='text-white font-serif mt-10 mb-4 text-xl lg:text-7xl space-x-7 font-bold'>Find yoru Car </h1>
-                </div>
+            <div className='lg:h-[100vh] relative w-full lg:mb-32'>
+                <img src={headerImg} className='relative h-[90vh] md:w-full rounded-lg' alt="" />
+                <img data-aos="fade-down" src={headerCar} className='absolute -mt-52 lg:-mt-72 lg:ml-28' alt="" />
+
+
+                {/*  */}
+                <h2 className='text-white text-center font-sans mb-4 text-3xl lg:text-7xl md:text-6xl sm:text-3xl space-x-7 font-bold absolute md:-mt-[266px] lg:-mt-[360px] md:ml-36 lg:ml-[250px] -mt-60 ml-20 w-2/3'
+                    style={{
+                        color: 'black',
+                        WebkitTextFillColor: 'white',
+                        WebkitTextStrokeWidth: '1px',
+                        WebkitTextStrokeColor: 'black'
+                    }}>
+                    <Typewriter
+                        data-aos="fade-down"
+                        onInit={(typewriter) => {
+                            typewriter.typeString('Find Your Dream Car')
+                                .callFunction(() => {
+                                    console.log('String typed out!');
+                                })
+                                .pauseFor(2500)
+                                .deleteAll()
+                                .callFunction(() => {
+                                    console.log('All strings were deleted');
+                                })
+                                .start();
+                        }}
+                    />
+                </h2>
+
+
+
+
             </div>
             <div className="">
 

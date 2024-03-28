@@ -10,12 +10,12 @@ const FAQ = () => {
     return (
         <div>
             <div  className="md:flex md:mt-40 ">
-                <div data-aos="fade-right" className="flex-1 md:p-[80px] space-y-6">
+                <div data-aos="fade-left" className="flex-1 md:p-[80px] space-y-6">
                     <h3 className="text-3xl font-bold mb-2">FREQUENTLY ASKED QUESTIONS</h3>
                     <h1 className="text-5xl font-bold mb-2">Here Our Most Question</h1>
                     <p className="space-y-4">Nam in massa feugiat, varius est ut, molestie purus. Maecenas non turpis in nibh tincidunt posuere. Mauris ligula nunc, pulvinar sit amet tempor a, mattis in libero. Aenean non lectus auctor, aliquet neque a, vestibulum enim. Integer in dui leo. Phasellus sit amet laoreet ex.</p>
                 </div>
-                <div data-aos="fade-left" className="flex-1 ">
+                <div data-aos="fade-right" className="flex-1 ">
                     <div  className="collapse collapse-plus bg-base-200">
                         <input type="radio" name="my-accordion-3" checked="checked" />
                         <div className="collapse-title text-xl font-medium">
